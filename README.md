@@ -1,4 +1,4 @@
-Griffon JavaFX/Java project
+Basic Griffon JavaFX/Java project
 ---------------------------------
 
 You have just created a basic Griffon application with JavaFX as UI toolkit

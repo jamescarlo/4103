@@ -42,7 +42,7 @@ griffon {
     ]
 }
 
-mainClassName = 'app.Launcher'
+mainClassName = 'org.example.Launcher'
 
 apply from: 'gradle/publishing.gradle'
 apply from: 'gradle/code-coverage.gradle'
