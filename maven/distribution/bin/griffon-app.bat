@@ -74,7 +74,7 @@ set CLASSPATH=%APP_HOME%\resources
 for %%i in (%LIBDIR%\*.jar) do set CLASSPATH=!CLASSPATH!;%%i
 
 @rem Execute griffon-app
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %SAMPLE_OPTS%  -classpath "%CLASSPATH%" app.Launcher %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %SAMPLE_OPTS%  -classpath "%CLASSPATH%" org.example.Launcher %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell
