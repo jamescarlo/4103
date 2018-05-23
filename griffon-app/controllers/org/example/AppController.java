@@ -23,5 +23,16 @@ public class AppController extends AbstractGriffonController {
     public void click() {
         int count = Integer.parseInt(model.getClickCount());
         model.setClickCount(String.valueOf(count + 1));
+        
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/A.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+            
+        } catch(Exception e) {
+           e.printStackTrace();
+        }
     }
 }
