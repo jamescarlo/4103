@@ -16,6 +16,9 @@ import org.codehaus.griffon.runtime.javafx.artifact.AbstractJavaFXGriffonView;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 
+import javafx.fxml.FXMLLoader;
+
+
 @ArtifactProviderFor(GriffonView.class)
 public class AppView extends AbstractJavaFXGriffonView {
     private AppController controller;
@@ -46,6 +49,20 @@ public class AppView extends AbstractJavaFXGriffonView {
 
     // build the UI
     private Scene init() {
+
+        Parent root = null;
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            
+        } catch(Exception e) {
+           e.printStackTrace();
+        }
+
+        /*
+
         Scene scene = new Scene(new Group());
         scene.setFill(Color.WHITE);
 
@@ -60,5 +77,9 @@ public class AppView extends AbstractJavaFXGriffonView {
         connectMessageSource(node);
 
         return scene;
+
+        */
+
+        return new Scene(root);
     }
 }
