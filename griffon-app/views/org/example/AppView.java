@@ -43,7 +43,6 @@ public class AppView extends AbstractJavaFXGriffonView {
         Stage stage = (Stage) getApplication()
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
-        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(init());
         stage.sizeToScene();
     
@@ -57,7 +56,7 @@ public class AppView extends AbstractJavaFXGriffonView {
         Parent root = null;
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/auth/login.fxml"));
             root = (Parent) fxmlLoader.load();
 
 

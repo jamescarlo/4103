@@ -9,6 +9,10 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
+import javax.swing.JOptionPane;
+
+
+
 @ArtifactProviderFor(GriffonController.class)
 public class LoginController extends AbstractGriffonController {
     private LoginModel model;
@@ -16,12 +20,16 @@ public class LoginController extends AbstractGriffonController {
     @MVCMember
     public void setModel(@Nonnull LoginModel model) {
         this.model = model;
+        System.out.println("test");
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void click() {
+        /**
         int count = Integer.parseInt(model.getClickCount());
         model.setClickCount(String.valueOf(count + 1));
+         */
+        System.out.println("test");
     }
 }
