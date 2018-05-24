@@ -1,8 +1,18 @@
 #LoginForm{
     -fx-background-color:black;
     -fx-border-color:white;
-    -fx-border-radius:30px;
+    -fx-border-radius:1px;
     -fx-background-radius:20px;
+    -fx-background-image: url('../background_images/bg1.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-attachment: fixed;
+    -fx-background-size: cover;
 }
-
+#CloseButton{
+    -fx-Background-color: #1d9ae0;
+}
+#LoginButton{
+    -fx-Background-color: #1d9ae0;
+}
 
