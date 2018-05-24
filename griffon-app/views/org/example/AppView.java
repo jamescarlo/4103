@@ -44,8 +44,9 @@ public class AppView extends AbstractJavaFXGriffonView {
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
         stage.setScene(init());
         stage.sizeToScene();
-   
+    
         getApplication().getWindowManager().attach("mainWindow", stage);
+      
     }
 
     // build the UI
