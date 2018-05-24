@@ -17,6 +17,7 @@ import java.util.Collections;
 import javax.annotation.Nonnull;
 
 import javafx.fxml.FXMLLoader;
+import javafx.stage.StageStyle;
 
 
 @ArtifactProviderFor(GriffonView.class)
@@ -42,6 +43,7 @@ public class AppView extends AbstractJavaFXGriffonView {
         Stage stage = (Stage) getApplication()
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(init());
         stage.sizeToScene();
     
@@ -57,8 +59,8 @@ public class AppView extends AbstractJavaFXGriffonView {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
             root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-         
+
+
         } catch(Exception e) {
            e.printStackTrace();
         }
