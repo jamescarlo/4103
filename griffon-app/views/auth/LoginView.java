@@ -15,7 +15,6 @@ import org.codehaus.griffon.runtime.javafx.artifact.AbstractJavaFXGriffonView;
 
 import java.util.Collections;
 import javax.annotation.Nonnull;
-
 import javafx.stage.StageStyle;
 
 
@@ -26,6 +25,7 @@ public class LoginView extends AbstractJavaFXGriffonView {
 
     @FXML
     private Label clickLabel;
+  
 
     @MVCMember
     public void setController(@Nonnull LoginController controller) {
@@ -43,9 +43,12 @@ public class LoginView extends AbstractJavaFXGriffonView {
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
         stage.initStyle(StageStyle.UNDECORATED);
+
         stage.setScene(init());
         stage.sizeToScene();
         getApplication().getWindowManager().attach("login", stage);
+
+
     }
 
     // build the UI
@@ -54,7 +57,7 @@ public class LoginView extends AbstractJavaFXGriffonView {
         scene.setFill(Color.WHITE);
 
         Node node = loadFromFXML();
-        
+
         if (node instanceof Parent) {
             scene.setRoot((Parent) node);
         } else {

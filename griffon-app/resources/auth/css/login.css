@@ -1,18 +1,23 @@
 #LoginForm{
-    -fx-background-color:black;
+
     -fx-border-color:white;
-    -fx-border-radius:1px;
-    -fx-background-radius:20px;
-    -fx-background-image: url('../background_images/bg1.jpg');
+    -fx-border-radius:2px;
+
+    -fx-background-image: url('../background_images/bg1Darken.jpg');
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-attachment: fixed;
     -fx-background-size: cover;
+
 }
-#CloseButton{
-    -fx-Background-color: #1d9ae0;
-}
-#LoginButton{
-    -fx-Background-color: #1d9ae0;
+#CloseButton,#LoginButton,#RegisterButton{
+  -fx-Background-color: #1d9ae0;
+  -fx-font-weight:bold;
 }
 
+#SmallContainer{
+  -fx-background-color: rgba(0, 0, 0, 0.5);
+  -fx-border-color:white;
+  -fx-border-radius:10px;
+
+}
