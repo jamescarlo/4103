@@ -12,7 +12,7 @@ public class Config extends AbstractMapResourceBundle {
         map(entries)
             .e("application", map()
                 .e("title", "griffon-app")
-                .e("startupGroups", asList("app"))
+                .e("startupGroups", asList("login"))
                 .e("autoShutdown", true)
             )
             .e("mvcGroups", map()
@@ -21,8 +21,6 @@ public class Config extends AbstractMapResourceBundle {
                     .e("view", "org.example.AppView")
                     .e("controller", "org.example.AppController")
                 )
-            );
-            .e("mvcGroups", map()
                 .e("login", map()
                     .e("model", "auth.LoginModel")
                     .e("view", "auth.LoginView")
