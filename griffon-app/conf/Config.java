@@ -22,5 +22,12 @@ public class Config extends AbstractMapResourceBundle {
                     .e("controller", "org.example.AppController")
                 )
             );
+            .e("mvcGroups", map()
+                .e("login", map()
+                    .e("model", "auth.LoginModel")
+                    .e("view", "auth.LoginView")
+                    .e("controller", "auth.LoginController")
+                )
+            );
     }
 }
