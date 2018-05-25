@@ -1,13 +1,8 @@
-
-*.class
-
 ### Java ###
 *.class
-
 ### Gradle ###
 .gradle
 /build/
-
 # Package Files #
 *.jar
 *.war

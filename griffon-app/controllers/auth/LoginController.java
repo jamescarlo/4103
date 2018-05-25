@@ -10,26 +10,34 @@ import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
 import javax.swing.JOptionPane;
-
+import griffon.inject.MVCMember;
 
 
 @ArtifactProviderFor(GriffonController.class)
 public class LoginController extends AbstractGriffonController {
     private LoginModel model;
+    private LoginView view;
 
     @MVCMember
     public void setModel(@Nonnull LoginModel model) {
         this.model = model;
-        System.out.println("test");
+    }
+
+    @MVCMember
+    public void setView(LoginView view) {
+        this.view = view;
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    public void click() {
-        /**
-        int count = Integer.parseInt(model.getClickCount());
-        model.setClickCount(String.valueOf(count + 1));
-         */
-        System.out.println("test");
+    public void login() {
+
+        System.out.println("PRINT PRINT PRINT");
+
+        String username = "test";
+
+        model.setUsername(username);
     }
+
+    
 }

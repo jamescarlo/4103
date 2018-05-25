@@ -64,7 +64,7 @@ public class AppView extends AbstractJavaFXGriffonView {
            e.printStackTrace();
         }
 
-        /*
+        
 
         Scene scene = new Scene(new Group());
         scene.setFill(Color.WHITE);
@@ -81,8 +81,8 @@ public class AppView extends AbstractJavaFXGriffonView {
 
         return scene;
 
-        */
+        
 
-        return new Scene(root);
+        //return new Scene(root);
     }
 }

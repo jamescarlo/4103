@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="auth.LoginController" id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="643.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="643.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="auth.LoginController">
    <children>
       <TextField layoutX="197.0" layoutY="159.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
       <TextField accessibleRole="PASSWORD_FIELD" layoutX="195.0" layoutY="203.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
-      <Button id="LoginButton" layoutX="197.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="WHITE" />
+      <Button fx:id="loginActionTarget" id="LoginButton" layoutX="197.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="WHITE" />
       <Label layoutX="288.0" layoutY="296.0" text="Forget password?" textFill="#c5c5da" underline="true">
          <font>
             <Font size="9.0" />
@@ -21,7 +21,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Button fx:id="clickActionTarget" id="CloseButton" cancelButton="true" layoutX="624.0" layoutY="1.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" text="X" textFill="WHITE">
+      <Button id="CloseButton" cancelButton="true" layoutX="624.0" layoutY="1.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" text="X" textFill="WHITE">
          <font>
             <Font size="7.0" />
          </font>

@@ -17,6 +17,7 @@ import java.util.Collections;
 import javax.annotation.Nonnull;
 
 import javafx.stage.StageStyle;
+import javafx.scene.control.TextField;
 
 
 @ArtifactProviderFor(GriffonView.class)
@@ -24,8 +25,12 @@ public class LoginView extends AbstractJavaFXGriffonView {
     private LoginController controller;
     private LoginModel model;
 
-    @FXML
-    private Label clickLabel;
+    @FXML 
+    public TextField username;
+
+    @FXML 
+    public TextField password;
+
 
     @MVCMember
     public void setController(@Nonnull LoginController controller) {
@@ -64,5 +69,10 @@ public class LoginView extends AbstractJavaFXGriffonView {
         connectMessageSource(node);
 
         return scene;
+    }
+
+    @Nonnull
+    public TextField getUsername() {
+        return username;
     }
 }

@@ -29,6 +29,7 @@ public class AppController extends AbstractGriffonController {
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void click() {
+        System.out.println("PRINT PRINT PRINT");
         int count = Integer.parseInt(model.getClickCount());
         model.setClickCount(String.valueOf(count + 1));
     }

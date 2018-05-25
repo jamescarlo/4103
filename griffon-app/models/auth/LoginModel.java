@@ -7,24 +7,40 @@ import javafx.beans.property.SimpleStringProperty;
 import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonModel;
 
 import javax.annotation.Nonnull;
+import java.util.Map;
+import griffon.inject.MVCMember;
+
 
 @ArtifactProviderFor(GriffonModel.class)
 public class LoginModel extends AbstractGriffonModel {
-    private StringProperty clickCount;
+    private StringProperty password;
+
+    private LoginView view;
+
+    @MVCMember
+    public void setView(LoginView view) {
+        this.view = view;
+    }
+
 
     @Nonnull
-    public final StringProperty clickCountProperty() {
-        if (clickCount == null) {
-            clickCount = new SimpleStringProperty(this, "clickCount", "0");
+    public final StringProperty passwordProperty() {
+        if (password == null) {
+            password = new SimpleStringProperty(this, "password", "test");
         }
-        return clickCount;
+        return password;
     }
 
-    public void setClickCount(String clickCount) {
-        clickCountProperty().set(clickCount);
+    
+    public void setUsername(String password) {
+        passwordProperty().set(password);
     }
 
-    public String getClickCount() {
-        return clickCountProperty().get();
+
+    @Override
+    public void mvcGroupInit(@Nonnull Map<String, Object> args) {
+        passwordProperty().addListener((observable, oldValue, newValue) -> {
+            runInsideUIAsync(() -> view.getUsername().setText(newValue));   
+        });
     }
 }
