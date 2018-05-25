@@ -25,7 +25,7 @@ public class LoginView extends AbstractJavaFXGriffonView {
 
     @FXML
     private Label clickLabel;
-  
+
 
     @MVCMember
     public void setController(@Nonnull LoginController controller) {
@@ -46,7 +46,7 @@ public class LoginView extends AbstractJavaFXGriffonView {
 
         stage.setScene(init());
         stage.sizeToScene();
-        getApplication().getWindowManager().attach("login", stage);
+        getApplication().getWindowManager().attach("register", stage);
 
 
     }
