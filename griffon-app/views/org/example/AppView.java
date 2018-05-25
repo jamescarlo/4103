@@ -56,7 +56,7 @@ public class AppView extends AbstractJavaFXGriffonView {
         Parent root = null;
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/auth/login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/auth/register.fxml"));
             root = (Parent) fxmlLoader.load();
 
 
