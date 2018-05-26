@@ -2,6 +2,7 @@
 *.class
 ### Gradle ###
 .gradle
+.settings
 /build/
 # Package Files #
 *.jar
