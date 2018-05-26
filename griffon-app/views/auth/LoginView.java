@@ -25,9 +25,15 @@ public class LoginView extends AbstractJavaFXGriffonView {
     private LoginController controller;
     private LoginModel model;
 
+    /*
+     * Get TextField with fx:id=username
+     */
     @FXML 
     public TextField username;
 
+    /*
+     * Get TextField with fx:id=password
+     */
     @FXML 
     public TextField password;
 
@@ -71,8 +77,4 @@ public class LoginView extends AbstractJavaFXGriffonView {
         return scene;
     }
 
-    @Nonnull
-    public TextField getUsername() {
-        return username;
-    }
 }

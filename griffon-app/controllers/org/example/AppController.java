@@ -8,13 +8,8 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
-
-import javafx.scene.*;
-import javafx.fxml.*;
-import javafx.stage.*;
-
-import javax.swing.JOptionPane;
-
+import javax.inject.Inject;
+import test.Util;
 
 
 @ArtifactProviderFor(GriffonController.class)
@@ -26,11 +21,13 @@ public class AppController extends AbstractGriffonController {
         this.model = model;
     }
 
+
+    @Inject
+    private Util util;
+
+
     @ControllerAction
-    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void click() {
-        System.out.println("PRINT PRINT PRINT");
-        int count = Integer.parseInt(model.getClickCount());
-        model.setClickCount(String.valueOf(count + 1));
+        util.toggleView("app", "login");   
     }
 }

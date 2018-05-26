@@ -46,31 +46,18 @@ public class AppView extends AbstractJavaFXGriffonView {
         stage.setScene(init());
         stage.sizeToScene();
     
-        getApplication().getWindowManager().attach("mainWindow", stage);
+        getApplication().getWindowManager().attach("app", stage);
       
     }
 
     // build the UI
     private Scene init() {
 
-        Parent root = null;
-
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/auth/login.fxml"));
-            root = (Parent) fxmlLoader.load();
-
-
-        } catch(Exception e) {
-           e.printStackTrace();
-        }
-
-        
-
         Scene scene = new Scene(new Group());
         scene.setFill(Color.WHITE);
 
         Node node = loadFromFXML();
-        model.clickCountProperty().bindBidirectional(clickLabel.textProperty());
+        
         if (node instanceof Parent) {
             scene.setRoot((Parent) node);
         } else {
@@ -80,9 +67,5 @@ public class AppView extends AbstractJavaFXGriffonView {
         connectMessageSource(node);
 
         return scene;
-
-        
-
-        //return new Scene(root);
     }
 }

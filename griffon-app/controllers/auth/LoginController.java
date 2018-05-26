@@ -9,8 +9,12 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
-import javax.swing.JOptionPane;
 import griffon.inject.MVCMember;
+import javax.inject.Inject;
+import test.Util;
+import test.DBQuery;
+import java.util.Map;
+import org.apache.commons.collections4.MultiMap;
 
 
 @ArtifactProviderFor(GriffonController.class)
@@ -23,20 +27,78 @@ public class LoginController extends AbstractGriffonController {
         this.model = model;
     }
 
+
     @MVCMember
-    public void setView(LoginView view) {
+    public void setView(@Nonnull LoginView view) {
         this.view = view;
     }
 
+
+    @Inject
+    private Util util;
+
+    @Inject
+    private DBQuery dbquery;
+
+
     @ControllerAction
-    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void login() {
 
-        System.out.println("PRINT PRINT PRINT");
+        /*
+         * Get username from LoginView
+         */
+        String username = view.username.getText();
 
-        String username = "test";
+        /*
+         * Get password from LoginView
+         */
+        String password = view.password.getText();
 
-        model.setUsername(username);
+
+        MultiMap query = dbquery.map();
+        query.put("table",         "users");
+        query.put("condition",     "username = "+ username);
+        query.put("condition:and", "password = "+ password);
+
+        Map<String, Map> data = dbquery.get(query);
+
+        /*
+         * Check if account exist
+         */
+        if(data.size() != 0) {
+
+            /*
+             * Hide LoginView and Show AppView 
+             */
+            util.toggleView("login", "app");
+        }else {
+
+            util.toast("Failed to Log In");
+        }
+
+
+        /*
+         * Add new user sample
+         */
+
+        /*
+        MultiMap query = dbquery.map();
+        query.put("table", "users");
+        query.put("set",   "username = "+ username);
+        query.put("set",   "password = "+ password);
+
+        dbquery.save(query);
+        */
+    }
+
+
+    @ControllerAction
+    public void close() {
+
+        /*
+         * Close application
+         */
+        getApplication().shutdown();
     }
 
     

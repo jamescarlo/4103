@@ -7,24 +7,18 @@ import javafx.beans.property.SimpleStringProperty;
 import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonModel;
 
 import javax.annotation.Nonnull;
+import griffon.inject.MVCMember;
+
 
 @ArtifactProviderFor(GriffonModel.class)
 public class AppModel extends AbstractGriffonModel {
-    private StringProperty clickCount;
 
-    @Nonnull
-    public final StringProperty clickCountProperty() {
-        if (clickCount == null) {
-            clickCount = new SimpleStringProperty(this, "clickCount", "0");
-        }
-        return clickCount;
+    private AppView view;
+
+
+    @MVCMember
+    public void setView(AppView view) {
+        this.view = view;
     }
 
-    public void setClickCount(String clickCount) {
-        clickCountProperty().set(clickCount);
-    }
-
-    public String getClickCount() {
-        return clickCountProperty().get();
-    }
 }

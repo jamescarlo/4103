@@ -13,9 +13,9 @@ import griffon.inject.MVCMember;
 
 @ArtifactProviderFor(GriffonModel.class)
 public class LoginModel extends AbstractGriffonModel {
-    private StringProperty password;
 
     private LoginView view;
+
 
     @MVCMember
     public void setView(LoginView view) {
@@ -23,6 +23,7 @@ public class LoginModel extends AbstractGriffonModel {
     }
 
 
+    /**
     @Nonnull
     public final StringProperty passwordProperty() {
         if (password == null) {
@@ -32,7 +33,7 @@ public class LoginModel extends AbstractGriffonModel {
     }
 
     
-    public void setUsername(String password) {
+    public void setPassword(String password) {
         passwordProperty().set(password);
     }
 
@@ -40,7 +41,9 @@ public class LoginModel extends AbstractGriffonModel {
     @Override
     public void mvcGroupInit(@Nonnull Map<String, Object> args) {
         passwordProperty().addListener((observable, oldValue, newValue) -> {
-            runInsideUIAsync(() -> view.getUsername().setText(newValue));   
+            System.out.println(newValue);
+            runInsideUIAsync(() -> view.password.setText(newValue));   
         });
     }
+     */
 }
