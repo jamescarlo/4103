@@ -21,33 +21,27 @@ import javafx.scene.control.TextField;
 
 
 @ArtifactProviderFor(GriffonView.class)
-public class LoginView extends AbstractJavaFXGriffonView {
-    private LoginController controller;
-    private LoginModel model;
+public class RegisterView extends AbstractJavaFXGriffonView {
+    private RegisterController controller;
+    private RegisterModel model;
 
-    /*
-     * Get TextField with fx:id=username
-     */
-    @FXML 
-    public TextField username;
 
-    /*
-     * Get TextField with fx:id=password
-     */
-    @FXML 
-    public TextField password;
 
 
     @MVCMember
-    public void setController(@Nonnull LoginController controller) {
+    public void setController(@Nonnull RegisterController controller) {
         this.controller = controller;
     }
 
     @MVCMember
-    public void setModel(@Nonnull LoginModel model) {
+    public void setModel(@Nonnull RegisterModel model) {
         this.model = model;
     }
 
+
+    /*
+     * No need to edit initUI
+     */
     @Override
     public void initUI() {
         Stage stage = (Stage) getApplication()
@@ -56,10 +50,13 @@ public class LoginView extends AbstractJavaFXGriffonView {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(init());
         stage.sizeToScene();
-        getApplication().getWindowManager().attach("login", stage);
+        getApplication().getWindowManager().attach("register", stage);
     }
 
-    // build the UI
+    
+    /*
+     * No need to edit init
+     */
     private Scene init() {
         Scene scene = new Scene(new Group());
         scene.setFill(Color.WHITE);

@@ -12,13 +12,13 @@ import griffon.inject.MVCMember;
 
 
 @ArtifactProviderFor(GriffonModel.class)
-public class LoginModel extends AbstractGriffonModel {
+public class RegisterModel extends AbstractGriffonModel {
 
-    private LoginView view;
+    private RegisterView view;
 
 
     @MVCMember
-    public void setView(LoginView view) {
+    public void setView(RegisterView view) {
         this.view = view;
     }
 }

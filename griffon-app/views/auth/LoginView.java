@@ -48,6 +48,10 @@ public class LoginView extends AbstractJavaFXGriffonView {
         this.model = model;
     }
 
+
+    /*
+     * No need to edit initUI
+     */
     @Override
     public void initUI() {
         Stage stage = (Stage) getApplication()
@@ -59,7 +63,10 @@ public class LoginView extends AbstractJavaFXGriffonView {
         getApplication().getWindowManager().attach("login", stage);
     }
 
-    // build the UI
+
+    /*
+     * No need to edit initUI
+     */
     private Scene init() {
         Scene scene = new Scene(new Group());
         scene.setFill(Color.WHITE);
