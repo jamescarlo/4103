@@ -10,9 +10,9 @@
 
 <AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="909.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="auth.LoginController">
    <children>
-      <Button fx:id="closeActionTarget" cancelButton="true" layoutX="891.0" layoutY="1.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="18.0" text="X" textFill="WHITE">
+      <Button fx:id="closeActionTarget" cancelButton="true" layoutX="881.0" layoutY="1.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="27.0" text="X" textFill="WHITE">
          <font>
-            <Font size="7.0" />
+            <Font size="10.0" />
          </font>
       </Button>
       <AnchorPane fx:id="LoginSmallContainer" layoutX="428.0" layoutY="67.0" prefHeight="310.0" prefWidth="420.0">

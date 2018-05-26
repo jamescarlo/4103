@@ -10,7 +10,6 @@
 }
 #closeActionTarget,#loginActionTarget,#registerActionTarget{
     -fx-Background-color: #1d9ae0;
-    -fx-font-weight: Bold;
 }
 #LoginSmallContainer{
   -fx-Background-color:rgba(0, 0, 0, 0.5);
