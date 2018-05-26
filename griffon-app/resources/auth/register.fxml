@@ -42,11 +42,6 @@
                   <Font name="Aharoni Bold" size="15.0" />
                </font>
             </Button>
-            <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="81.0" layoutY="427.0">
-               <image>
-                  <Image url="@../AppData/Local/Temp/icons8_Add_User_Male_24px_1.png" />
-               </image>
-            </ImageView>
             <Label layoutX="316.0" layoutY="14.0" />
             <Label layoutX="42.0" layoutY="158.0" prefHeight="20.0" prefWidth="47.0" text="Email">
                <font>
