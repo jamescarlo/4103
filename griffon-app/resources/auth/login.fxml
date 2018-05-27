@@ -2,43 +2,60 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="909.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="auth.LoginController">
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="909.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="auth.LoginController">
    <children>
-      <Button fx:id="closeActionTarget" cancelButton="true" layoutX="881.0" layoutY="1.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="27.0" text="X" textFill="WHITE">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Button>
+      <Button fx:id="closeActionTarget" cancelButton="true" ellipsisString="X" layoutX="883.0" layoutY="1.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="25.0" text="X" textAlignment="CENTER" textFill="WHITE" />
       <AnchorPane fx:id="LoginSmallContainer" layoutX="428.0" layoutY="67.0" prefHeight="310.0" prefWidth="420.0">
          <children>
-            <TextField fx:id="username" layoutX="85.0" layoutY="111.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
-            <TextField fx:id="password" accessibleRole="PASSWORD_FIELD" layoutX="83.0" layoutY="155.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
-            <Button fx:id="loginActionTarget" layoutX="85.0" layoutY="206.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="WHITE" />
-            <Label layoutX="163.0" layoutY="248.0" text="Forgot password?" textFill="#c5c5da" underline="true" />
-            <Label layoutX="176.0" layoutY="64.0" text="Sign In" textFill="#d2d2da">
+            <Button fx:id="loginActionTarget" defaultButton="true" layoutX="85.0" layoutY="201.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="WHITE">
                <font>
-                  <Font size="22.0" />
+                  <Font size="14.0" />
+               </font></Button>
+            <Label layoutX="163.0" layoutY="248.0" text="Forgot password?" textFill="#c5c5da" underline="true" />
+            <Label layoutX="164.0" layoutY="40.0" text="Sign In" textFill="#d2d2da">
+               <font>
+                  <Font size="30.0" />
                </font>
             </Label>
+            <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="84.0" layoutY="112.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
+            <PasswordField fx:id="password" layoutX="84.0" layoutY="155.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="333.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logos/ClosedEye.png" />
+               </image>
+            </ImageView>
          </children>
+         <effect>
+            <Reflection fraction="0.65" topOpacity="0.61" />
+         </effect>
       </AnchorPane>
-      <ImageView fitHeight="102.0" fitWidth="114.0" layoutX="119.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="102.0" fitWidth="114.0" layoutX="148.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logos/A.png" />
          </image>
       </ImageView>
-      <Label layoutX="29.0" layoutY="204.0" text="Welcome to gamers community" textFill="#d2d2da" underline="true">
+      <Label layoutX="58.0" layoutY="202.0" text="Welcome to gamers community" textFill="#d2d2da" underline="true">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="29.0" layoutY="236.0" text="Design by Joshua Apellido" textFill="#d2d2da" />
-      <Button fx:id="registerActionTarget" layoutX="29.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="REGISTER" textFill="WHITE" />
+      <Label layoutX="58.0" layoutY="234.0" text="Design by Joshua Apellido" textFill="#d2d2da" />
+      <Button fx:id="registerActionTarget" layoutX="58.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="REGISTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="75.0" fitWidth="25.0" layoutX="323.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logos/A.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

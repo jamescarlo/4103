@@ -16,7 +16,6 @@ import test.DBQuery;
 import java.util.Map;
 import org.apache.commons.collections4.MultiMap;
 
-
 @ArtifactProviderFor(GriffonController.class)
 public class LoginController extends AbstractGriffonController {
     private LoginModel model;
@@ -68,7 +67,7 @@ public class LoginController extends AbstractGriffonController {
         if(data.size() != 0) {
 
             /*
-             * Hide LoginView and Show AppView 
+             * Hide LoginView and Show AppView
              */
             util.toggleView("login", "app");
         }else {
@@ -101,5 +100,5 @@ public class LoginController extends AbstractGriffonController {
         getApplication().shutdown();
     }
 
-    
+
 }

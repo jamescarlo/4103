@@ -10,10 +10,22 @@
 }
 #closeActionTarget,#loginActionTarget,#registerActionTarget{
     -fx-Background-color: #1d9ae0;
+    -fx-font-weight:bold;
 }
 #LoginSmallContainer{
   -fx-Background-color:rgba(0, 0, 0, 0.5);
   -fx-border-radius: 5px;
   -fx-border-color: white;
   -fx-background-radius:10px;
-}
+}/*
+#username{
+
+    -fx-font-color: white;
+    -fx-outline: none;
+    -fx-border-top: none;
+    -fx-outline-style: none;
+    -fx-border-left: none;
+    -fx-border-right: none;
+    -fx-border-bottom:solid 5px white;
+
+} */

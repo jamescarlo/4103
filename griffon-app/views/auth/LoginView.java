@@ -28,13 +28,13 @@ public class LoginView extends AbstractJavaFXGriffonView {
     /*
      * Get TextField with fx:id=username
      */
-    @FXML 
+    @FXML
     public TextField username;
 
     /*
      * Get TextField with fx:id=password
      */
-    @FXML 
+    @FXML
     public TextField password;
 
 
@@ -61,6 +61,7 @@ public class LoginView extends AbstractJavaFXGriffonView {
         stage.setScene(init());
         stage.sizeToScene();
         getApplication().getWindowManager().attach("login", stage);
+
     }
 
 
@@ -72,7 +73,7 @@ public class LoginView extends AbstractJavaFXGriffonView {
         scene.setFill(Color.WHITE);
 
         Node node = loadFromFXML();
-        
+
         if (node instanceof Parent) {
             scene.setRoot((Parent) node);
         } else {
