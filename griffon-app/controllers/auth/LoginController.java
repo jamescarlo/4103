@@ -100,5 +100,8 @@ public class LoginController extends AbstractGriffonController {
         getApplication().shutdown();
     }
 
-
+    @ControllerAction
+    public void gotoRegister(){
+      
+    }
 }
