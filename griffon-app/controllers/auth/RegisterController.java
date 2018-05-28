@@ -21,6 +21,15 @@ import org.apache.commons.collections4.MultiMap;
 public class RegisterController extends AbstractGriffonController {
     private RegisterModel model;
     private RegisterView view;
+    
+
+
+    @ControllerAction
+    public void back(){
+
+        util.toggleView("register","login");
+    }
+
 
     @MVCMember
     public void setModel(@Nonnull RegisterModel model) {
