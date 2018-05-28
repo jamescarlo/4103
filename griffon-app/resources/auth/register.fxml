@@ -52,7 +52,7 @@
             <Label layoutX="242.0" layoutY="14.0" />
             <ImageView layoutX="244.0" layoutY="19.0">
                <image>
-                  <Image url="@/logos/icons8_Close_Window_24px_1.png" />
+                  <Image url="@./logos/icons8_Close_Window_24px_1.png" />
                </image>
             </ImageView>
          </children>
