@@ -101,7 +101,12 @@ public class LoginController extends AbstractGriffonController {
     }
 
     @ControllerAction
-    public void gotoRegister(){
-      
+    public void register(){
+      util.toggleView("login", "register");
+    }
+
+    @ControllerAction
+    public void showPassword(){
+      util.toast("CLICKED");
     }
 }
