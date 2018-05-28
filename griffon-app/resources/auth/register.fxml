@@ -59,7 +59,7 @@
       </Pane>
       <ImageView fitHeight="317.0" fitWidth="529.0" layoutX="-106.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
          <image>
-            <Image url="@background.jpg" />
+            <Image url="@/background_images/background.jpg" />
          </image>
       </ImageView>
       <Label layoutX="40.0" layoutY="215.0" text="Griffon App" textFill="WHITE">
