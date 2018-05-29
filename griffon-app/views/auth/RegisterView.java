@@ -25,8 +25,11 @@ public class RegisterView extends AbstractJavaFXGriffonView {
     private RegisterController controller;
     private RegisterModel model;
 
-
-
+    @FXML
+    public TextField username;
+    
+    @FXML
+    public PasswordField password;
 
     @MVCMember
     public void setController(@Nonnull RegisterController controller) {
