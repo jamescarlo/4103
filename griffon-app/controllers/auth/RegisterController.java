@@ -45,17 +45,20 @@ public class RegisterController extends AbstractGriffonController {
     @ControllerAction
     public void register() {
        
-        String regusername = view.regusername.getText();
+        String regusername  = view.regusername.getText();
+        
+        String regpassword  = view.regpassword.getText();
 
-        String regpassword = view.regpassword.getText();
-
+        
         MultiMap query = dbquery.map();
         query.put("table", "users");
         query.put("set",   "username = "+ regusername);
         query.put("set",   "password = "+ regpassword);
 
         dbquery.save(query);
-
+                    
+        util.toast(regusername);
+        util.toast(regpassword);
         
     }
 
@@ -65,7 +68,7 @@ public class RegisterController extends AbstractGriffonController {
         util.toggleView("register","login");
     }
 
-    
+
    
 
 
