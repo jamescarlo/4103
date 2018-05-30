@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="username" layoutX="42.0" layoutY="235.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="regusername" accessibleRole="PASSWORD_FIELD" layoutX="42.0" layoutY="235.0" prefHeight="25.0" prefWidth="185.0" />
             <Label layoutX="42.0" layoutY="272.0" prefHeight="20.0" prefWidth="77.0" text="Password">
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -55,7 +55,7 @@
                   <Image url="@logos/icons8_Left_24px.png" />
                </image>
             </ImageView>
-            <PasswordField fx:id="password" layoutX="45.0" layoutY="292.0" prefHeight="25.0" prefWidth="185.0" />
+            <PasswordField fx:id="regpassword" layoutX="45.0" layoutY="292.0" prefHeight="25.0" prefWidth="185.0" />
             <PasswordField layoutX="45.0" layoutY="352.0" prefHeight="25.0" prefWidth="185.0" />
          </children>
       </Pane>
