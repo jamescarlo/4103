@@ -5,8 +5,8 @@ import griffon.core.mvc.MVCGroup;
 import org.codehaus.griffon.runtime.core.mvc.AbstractTypedMVCGroup;
 import javax.annotation.Nonnull;
 
-@Named("Register")
-public class LoginMVCGroup extends AbstractTypedMVCGroup<RegisterModel, RegisterView, RegisterController> {
+@Named("login")
+public class LoginMVCGroup extends AbstractTypedMVCGroup<LoginModel, LoginView, LoginController> {
     public LoginMVCGroup(@Nonnull MVCGroup delegate) {
         super(delegate);
     }

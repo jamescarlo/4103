@@ -146,7 +146,7 @@ public class DBQuery extends AbstractGriffonService {
                         }
                     }
                 }
-                query += "SET ("+ columns +") VALUES ("+ values +")";
+                query += "("+ columns +") VALUES ("+ values +")";
                 break;
              
             default:

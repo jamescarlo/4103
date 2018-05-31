@@ -55,10 +55,12 @@ public class RegisterController extends AbstractGriffonController {
         query.put("set",   "username = "+ regusername);
         query.put("set",   "password = "+ regpassword);
 
-        dbquery.save(query);
+        dbquery.save(query); 
+       util.toast("Account Created !");
+       util.toggleView("register","login");
                     
-        util.toast(regusername);
-        util.toast(regpassword);
+       
+        
         
     }
 
