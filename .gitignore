@@ -3,6 +3,7 @@
 ### Gradle ###
 .gradle
 .settings
+.classpath
 /build/
 # Package Files #
 *.jar
