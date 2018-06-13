@@ -14,8 +14,6 @@ gradlew run
 * Scene Builder
 
 ### Installation
-1. Java SE Development kit
-   [How to Download & Install Java JDK 8 in Windows](https://www.guru99.com/install-java.html)
-2. Gradle
-a
+1. Java SE Development kit. See here [How to Download & Install Java JDK 8 in Windows](https://www.guru99.com/install-java.html)
+2. Gradle. See here 
 3. Scene Builder
