@@ -105,8 +105,5 @@ public class LoginController extends AbstractGriffonController {
       util.toggleView("login", "register");
     }
 
-    @ControllerAction
-    public void showPassword(){
-      util.toast("CLICKED");
-    }
+  
 }

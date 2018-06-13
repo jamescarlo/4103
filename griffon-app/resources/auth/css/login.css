@@ -1,5 +1,6 @@
 #LoginForm{
     -fx-background-color:black;
+    /* -fx-Background-color:rgba(0, 0, 0, 0.9); */
     -fx-border-color:white;
     -fx-border-radius:5px;
     -fx-background-image: url('../background_images/bg1Darken.jpg');
