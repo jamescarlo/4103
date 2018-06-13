@@ -62,7 +62,7 @@ gradlew run
     */
    dbquery.save(query);
    ```
-3. Update query
+3. Update data
    ```
    /** 
     * Create a query object
@@ -80,7 +80,7 @@ gradlew run
     */
    dbquery.update(query);
    ```
-4. Delete query
+4. Delete data
    ```
    /** 
     * Create a query object
