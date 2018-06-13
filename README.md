@@ -46,3 +46,19 @@ gradlew run
    util.toast( results.get(0).get("color") );
    ```
 2. Insert data
+   ```
+   /** 
+    * Create a query object
+    */
+   MultiMap query = dbquery.map();
+   /**
+    * Assign table, values
+    */
+   query.put("table", "cars");
+   query.put("set",   "color = blue");
+   query.put("set",   "price = 800000");
+   /**
+    * Execute query
+    */
+   dbquery.save(query);
+   ```
