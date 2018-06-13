@@ -39,11 +39,11 @@ gradlew run
    /**
     * Display total results
     */
-   util.toast( results.size() );
+   util.toast(results.size());
    /**
     * Display the first data
     */
-   util.toast( results.get(0).get("color") );
+   util.toast(results.get(0).get("color"));
    ```
 2. Insert data
    ```
@@ -61,4 +61,39 @@ gradlew run
     * Execute query
     */
    dbquery.save(query);
+   ```
+3. Update query
+   ```
+   /** 
+    * Create a query object
+    */
+   MultiMap query = dbquery.map();
+   /**
+    * Assign table, new values, conditions
+    */
+   query.put("table",        "cars");
+   query.put("set",          "color = green");
+   query.put("condition",    "color = 123");
+   quert.put("condition:or", "color != blue");
+   /**
+    * Execute query
+    */
+   dbquery.update(query);
+   ```
+4. Delete query
+   ```
+   /** 
+    * Create a query object
+    */
+   MultiMap query = dbquery.map();
+   /**
+    * Assign table, conditions
+    */
+   query.put("table",        "cars");
+   query.put("condition",    "color = red");
+   quert.put("condition:or", "color = blue");
+   /**
+    * Execute query
+    */
+   dbquery.delete(query);
    ```
