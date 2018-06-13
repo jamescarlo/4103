@@ -69,11 +69,11 @@ gradlew run
     */
    MultiMap query = dbquery.map();
    /**
-    * Assign table, new values, conditions
+    * Assign table, values, conditions
     */
    query.put("table",        "cars");
    query.put("set",          "color = green");
-   query.put("condition",    "color = 123");
+   query.put("condition",    "color != red");
    quert.put("condition:or", "color != blue");
    /**
     * Execute query
