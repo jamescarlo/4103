@@ -21,18 +21,28 @@ gradlew run
 ### Database Operations
 1. Fetch data
    ```
-   // Create a query object
+   /** 
+    * Create a query object
+    */
    MultiMap query = dbquery.map();
-   // Assign database table, conditions
+   /**
+    * Assign table, conditions
+    */
    query.put("table",         "cars");
    query.put("condition",     "color = red");
    query.put("condition:and", "price >= 900000");
-   // Store results in a map
+   /**
+    * Store results in a map
+    */
    Map<String, Map> results = dbquery.get(query);
    
-   // Display total results
+   /**
+    * Display total results
+    */
    util.toast( results.size() );
-   // Display the first data
+   /**
+    * Display the first data
+    */
    util.toast( results.get(0).get("color") );
    ```
 2. Insert data
