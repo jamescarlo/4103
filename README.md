@@ -1,4 +1,6 @@
 # griffon-start
+Special mention to @sniper4627 @unresistable
+Thanks to these people who help in building this awesomeness
 
 ### Requirements
 * Java SE Development Kit
