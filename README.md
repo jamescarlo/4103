@@ -37,6 +37,22 @@ griffon-app
         └── org
 ```
 
+### Database Connection
+Create a file ```db.conf``` in resources folder
+```
+griffon-app
+    └── resources               
+        └── db.conf
+```
+
+db.conf
+```
+HOST = secret
+USERNAME = secret
+PASSWORD = secret
+DATABASE = secret
+```
+
 ### Database Operations
 1. Fetch data
    ```
