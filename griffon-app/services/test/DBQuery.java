@@ -1,11 +1,9 @@
-
 package test;
 
 import griffon.core.artifact.GriffonService;
 import griffon.core.resources.ResourceHandler;
 import griffon.metadata.ArtifactProviderFor;
 import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonService;
-
 
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
@@ -52,21 +50,6 @@ public class DBQuery extends AbstractGriffonService {
         return conn == null ? false : true;
     }
 
-
-    public void save(MultiMap mapquery) {
-        if(connect()) {
-            String query = querybuilder(mapquery, "insert");
-            try { 
-                Statement st = conn.createStatement();
-                st.executeUpdate(query);
-            }catch(SQLException e) {
-                System.err.println(e);
-            }
-            close();
-        }
-    }
-
-
     public Map get(MultiMap mapquery) {
         Map<Integer, Map> map = new HashMap();
         if(connect()) {
@@ -91,6 +74,44 @@ public class DBQuery extends AbstractGriffonService {
         return map;
     }
 
+    public void save(MultiMap mapquery) {
+        if(connect()) {
+            String query = querybuilder(mapquery, "insert");
+            try { 
+                Statement st = conn.createStatement();
+                st.executeUpdate(query);
+            }catch(SQLException e) {
+                System.err.println(e);
+            }
+            close();
+        }
+    }
+
+    public void update(MultiMap mapquery) {
+        if(connect()) {
+            String query = querybuilder(mapquery, "update");
+            try { 
+                Statement st = conn.createStatement();
+                st.executeUpdate(query);
+            }catch(SQLException e) {
+                System.err.println(e);
+            }
+            close();
+        }
+    }
+
+    public void delete(MultiMap mapquery) {
+        if(connect()) {
+            String query = querybuilder(mapquery, "delete");
+            try { 
+                Statement st = conn.createStatement();
+                st.executeUpdate(query);
+            }catch(SQLException e) {
+                System.err.println(e);
+            }
+            close();
+        }
+    }
 
     @Nonnull
     public String querybuilder(MultiMap mapquery, String action) {
@@ -146,7 +167,74 @@ public class DBQuery extends AbstractGriffonService {
                         }
                     }
                 }
-                query += "SET ("+ columns +") VALUES ("+ values +")";
+                query += "("+ columns +") VALUES ("+ values +")";
+                break;
+
+            case "update":
+                query = "UPDATE "+((ArrayList) mapquery.get("table")).get(0) +" ";
+                String set = "";
+                while(iterator.hasNext()) {
+                    String key = iterator.next()+"";
+                    if(key.equals("set")) {
+                        ArrayList list = (ArrayList) iterator.getValue();
+                        for(int i=0; i < list.size(); i++) {
+                            if(set != "") {
+                                set += ", ";
+                            }
+                            String[] value = (list.get(i)+"").split(" ");  
+                            try {
+                                int num = Integer.parseInt(value[2]);
+                                set += value[0] + value[1] + num;
+                            }catch(Exception e) {
+                                set += value[0] + value[1] +"'"+ value[2] +"'";
+                            }
+                        }
+                    }
+                }
+                query += "SET ("+ set +") WHERE ";
+                while(iterator.hasNext()) {
+                    String[] key = (iterator.next()+"").split(":"); 
+                    if(key[0].equals("condition")) {
+                        ArrayList list = (ArrayList) iterator.getValue();
+                        for(int i=0; i < list.size(); i++) {
+                            if(key.length == 2) {
+                                query += " "+ key[1] +" ";
+                            }   
+                            String[] value = (list.get(i)+"").split(" ");  
+                            try {
+                                int num = Integer.parseInt(value[2]);
+                                query += value[0] + value[1] + num;
+                            }catch(Exception e) {
+                                query += value[0] + value[1] +"'"+ value[2] +"'";
+                            }
+                        }
+                    }
+                }
+                break;
+
+            case "delete":
+                query = "DELETE FROM "+ ((ArrayList) mapquery.get("table")).get(0) +" ";
+                if(mapquery.size() > 1) {
+                    query += "WHERE ";
+                }
+                while(iterator.hasNext()) {
+                    String[] key = (iterator.next()+"").split(":"); 
+                    if(key[0].equals("condition")) {
+                        ArrayList list = (ArrayList) iterator.getValue();
+                        for(int i=0; i < list.size(); i++) {
+                            if(key.length == 2) {
+                                query += " "+ key[1] +" ";
+                            }   
+                            String[] value = (list.get(i)+"").split(" ");  
+                            try {
+                                int num = Integer.parseInt(value[2]);
+                                query += value[0] + value[1] + num;
+                            }catch(Exception e) {
+                                query += value[0] + value[1] +"'"+ value[2] +"'";
+                            }
+                        }
+                    }
+                }
                 break;
              
             default:
