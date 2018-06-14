@@ -18,7 +18,7 @@ cd griffon-start
 gradlew run
 ```
 
-### MVC Folder Structure
+### MVC Structure
 ```
    ├── griffon-app
    │   ├── conf
