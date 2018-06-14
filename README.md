@@ -9,7 +9,7 @@ Thanks to these people who help in building this awesomeness! :hearts:
 * Scene Builder
 
 ### Installation
-1. Java SE Development kit. See here [How to Download & Install Java JDK 8 in Windows](https://www.guru99.com/install-java.html)
+1. Java SE Development Kit. See here [How to Download & Install Java JDK 8 in Windows](https://www.guru99.com/install-java.html)
 2. Gradle. See here [How to install Gradle on Windows](https://www.bryanlor.com/blog/gradle-tutorial-how-install-gradle-windows)
 3. Scene Builder. See here [Gluon Scene Builder](http://gluonhq.com/products/scene-builder/)
 
