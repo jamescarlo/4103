@@ -22,7 +22,7 @@ gradlew run
 ```
    ├── griffon-app
    │   ├── conf
-   |   |   └── Config.java    # Defines MVC groups
+   |   |   └── Config.java    # Define MVC groups
    │   ├── controllers        # Contains all controllers
    |   |   ├── auth           # Contains controllers (Login, Register)
    |   |   └── org
