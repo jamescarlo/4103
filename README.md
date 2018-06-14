@@ -1,5 +1,5 @@
 # griffon-start
-Special mention to @sniper4627 @unresistable
+Special mention to [@sniper4627](https://gitbub.com/sniper4627) [@unresistable](https://gitbub.com/unresistable)  
 Thanks to these people who help in building this awesomeness
 
 ### Requirements
