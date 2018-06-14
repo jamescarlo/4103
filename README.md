@@ -20,21 +20,21 @@ gradlew run
 
 ### MVC Structure
 ```
-   ├── griffon-app
-   │   ├── conf
-   |   |   └── Config.java    # Define MVC groups
-   │   ├── controllers        # Contains all controllers
-   |   |   ├── auth           # Contains controllers (Login, Register)
-   |   |   └── org
-   │   ├── models             # Contains all models
-   |   |   ├── auth           # Contains models (Login, Register)
-   |   |   └── org
-   │   ├── resources          # Contains properties & FXML files
-   |   |   ├── auth           # Contains FXML files (Login, Register)
-   |   |   └── org
-   │   └── views              # Contains all views
-   |       ├── auth           # Contains views (Login, Register)
-   |       └── org
+griffon-app
+├── conf
+|   └── Config.java    # Define MVC groups
+├── controllers        # Contains all controllers
+|   ├── auth           # Contains controllers (Login, Register)
+|   └── org
+├── models             # Contains all models
+|   ├── auth           # Contains models (Login, Register)
+|   └── org
+├── resources          # Contains properties & FXML files
+|   ├── auth           # Contains FXML files (Login, Register)
+|   └── org
+└── views              # Contains all views
+    ├── auth           # Contains views (Login, Register)
+    └── org
 ```
 
 ### Database Operations
@@ -98,5 +98,5 @@ gradlew run
    dbquery.delete(query);
    ```
    
-### Examples
+### Samples
 1. Please put something
