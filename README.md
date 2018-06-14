@@ -1,46 +1,102 @@
-Basic Griffon JavaFX/Java project
----------------------------------
+# griffon-start
 
-You have just created a basic Griffon application with JavaFX as UI toolkit
-and Java as main language. The project has the following file structure
+### Requirements
+* Java SE Development Kit
+* Gradle
+* Any text editor (Sublime Text, VS Code, Vim, Atom)
+* Scene Builder
 
-    .
-    ├── build.gradle
-    ├── griffon-app
-    │   ├── conf
-    │   ├── controllers
-    │   ├── i18n
-    │   ├── lifecycle
-    │   ├── models
-    │   ├── resources
-    │   ├── services
-    │   └── views
-    ├── pom.xml
-    └── src
-        ├── functional-test
-        │   └── java
-        ├── integration-test
-        │   └── java
-        ├── main
-        │   ├── java
-        │   └── resources
-        └── test
-            ├── java
-            └── resources
+### Installation
+1. Java SE Development kit. See here [How to Download & Install Java JDK 8 in Windows](https://www.guru99.com/install-java.html)
+2. Gradle. See here [How to install Gradle on Windows](https://www.bryanlor.com/blog/gradle-tutorial-how-install-gradle-windows)
+3. Scene Builder. See here [Gluon Scene Builder](http://gluonhq.com/products/scene-builder/)
 
-Simply add your source files to `src/main/java`, your test cases to
-`src/test/java` and then you will be able to build your project with
+### Quick Start
+```
+git clone https://github.com/ivan-ortiz/griffon-start.git
+cd griffon-start
+gradlew run
+```
 
-    gradle build
-    gradle test
-    gradle run
+### MVC Structure
+```
+griffon-app
+    ├── conf
+    |   └── Config.java         # Define MVC groups
+    ├── controllers             # Contains all controllers
+    |   ├── auth                # Contains controllers (Login, Register)
+    |   └── org
+    ├── models                  # Contains all models
+    |   ├── auth                # Contains models (Login, Register)
+    |   └── org
+    ├── resources               # Contains properties & FXML files
+    |   ├── auth                # Contains FXML files (Login, Register)
+    |   └── org
+    └── views                   # Contains all views
+        ├── auth                # Contains views (Login, Register)
+        └── org
+```
 
-Don't forget to add any extra JAR dependencies to `build.gradle`!
-
-If you prefer building with Maven then execute the following commands
-
-    mvn compile
-    mvn test
-    mvn -Prun
-
-Don't forget to add any extra JAR dependencies to `pom.xml`!
+### Database Operations
+1. Fetch data
+   ```
+   // Create a query object
+   MultiMap query = dbquery.map();
+   
+   // Assign table, conditions
+   query.put("table",         "cars");
+   query.put("condition",     "color = red");
+   query.put("condition:and", "price >= 900000");
+   
+   // Store results in a map
+   Map<String, Map> results = dbquery.get(query);
+   
+   /// Display total results
+   util.toast(results.size());
+   
+   /. Display the first data
+   util.toast(results.get(0).get("color"));
+   ```
+2. Insert data
+   ```
+   // Create a query object
+   MultiMap query = dbquery.map();
+   
+   // Assign table, values
+   query.put("table", "cars");
+   query.put("set",   "color = blue");
+   query.put("set",   "price = 800000");
+   
+   // Execute query
+   dbquery.save(query);
+   ```
+3. Update data
+   ```
+   // Create a query object
+   MultiMap query = dbquery.map();
+   
+   // Assign table, values, conditions
+   query.put("table",        "cars");
+   query.put("set",          "color = green");
+   query.put("condition",    "color != red");
+   quert.put("condition:or", "color != blue");
+   
+   // Execute query
+   dbquery.update(query);
+   ```
+4. Delete data
+   ```
+   // Create a query object
+   MultiMap query = dbquery.map();
+   
+   // Assign table, conditions
+   query.put("table",        "cars");
+   query.put("condition",    "color = red");
+   quert.put("condition:or", "color = blue");
+   
+   // Execute query
+   dbquery.delete(query);
+   ```
+   
+### Samples
+1. Please put something

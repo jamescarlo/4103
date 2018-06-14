@@ -21,6 +21,7 @@ import org.apache.commons.collections4.MultiMap;
 public class RegisterController extends AbstractGriffonController {
     private RegisterModel model;
     private RegisterView view;
+    
 
     @MVCMember
     public void setModel(@Nonnull RegisterModel model) {
@@ -40,6 +41,37 @@ public class RegisterController extends AbstractGriffonController {
     @Inject
     private DBQuery dbquery;
 
+
+    @ControllerAction
+    public void register() {
+       
+        String regusername  = view.regusername.getText();
+        
+        String regpassword  = view.regpassword.getText();
+
+        
+        MultiMap query = dbquery.map();
+        query.put("table", "users");
+        query.put("set",   "username = "+ regusername);
+        query.put("set",   "password = "+ regpassword);
+
+        dbquery.save(query); 
+       util.toast("Account Created !");
+       util.toggleView("register","login");
+                    
+       
+        
+        
+    }
+
+    @ControllerAction
+    public void back(){
+
+        util.toggleView("register","login");
+    }
+
+
+   
 
 
     @ControllerAction

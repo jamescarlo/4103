@@ -103,5 +103,10 @@ public class LoginController extends AbstractGriffonController {
         getApplication().shutdown();
     }
 
+    @ControllerAction
+    public void register(){
+      util.toggleView("login", "register");
+    }
 
+  
 }

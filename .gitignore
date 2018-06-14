@@ -4,7 +4,10 @@
 .gradle
 .settings
 /build/
-# Package Files #
+### Package Files ###
 *.jar
 *.war
 *.ear
+###  ###
+.project
+.classpath

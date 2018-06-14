@@ -168,6 +168,7 @@ public class DBQuery extends AbstractGriffonService {
                     }
                 }
                 query += "("+ columns +") VALUES ("+ values +")";
+<<<<<<< HEAD
                 break;
 
             case "update":
@@ -235,6 +236,8 @@ public class DBQuery extends AbstractGriffonService {
                         }
                     }
                 }
+=======
+>>>>>>> d0f67e950cf93fddefa5f2e189c254ff85c13020
                 break;
              
             default:
