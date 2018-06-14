@@ -18,6 +18,30 @@ cd griffon-start
 gradlew run
 ```
 
+### Files/Folders Structure
+```
+   ├── griffon-app
+   │   ├── conf
+   |   |   └── Config.java    # Defines MVC groups
+   │   ├── controllers        # Contains all controllers
+   |   |   ├── auth           # Contains controllers (Login, Register)
+   |   |   └── org
+   │   ├── i18n
+   │   ├── lifecycle
+   │   ├── models             # Contains all models
+   |   |   ├── auth           # Contains models (Login, Register)
+   |   |   └── org
+   │   ├── resources          # Contains properties & FXML files
+   |   |   ├── auth
+   |   |   └── org
+   │   ├── services           # Contains all services
+   │   └── views              # Contains all views
+   |       ├── auth           # Contains views (Login, Register)
+   |       └── org
+   ├── src
+   ├── build.gradle           # Defines build configuration scripts & dependencies
+```
+
 ### Database Operations
 1. Fetch data
    ```
@@ -78,3 +102,6 @@ gradlew run
    // Execute query
    dbquery.delete(query);
    ```
+   
+### Examples
+1. Please put something
