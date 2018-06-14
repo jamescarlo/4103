@@ -18,7 +18,7 @@ cd griffon-start
 gradlew run
 ```
 
-### Files/Folders Structure
+### MVC Folder Structure
 ```
    ├── griffon-app
    │   ├── conf
@@ -26,20 +26,15 @@ gradlew run
    │   ├── controllers        # Contains all controllers
    |   |   ├── auth           # Contains controllers (Login, Register)
    |   |   └── org
-   │   ├── i18n
-   │   ├── lifecycle
    │   ├── models             # Contains all models
    |   |   ├── auth           # Contains models (Login, Register)
    |   |   └── org
    │   ├── resources          # Contains properties & FXML files
-   |   |   ├── auth
+   |   |   ├── auth           # Contains FXML files (Login, Register)
    |   |   └── org
-   │   ├── services           # Contains all services
    │   └── views              # Contains all views
    |       ├── auth           # Contains views (Login, Register)
    |       └── org
-   ├── src
-   ├── build.gradle           # Defines build configuration scripts & dependencies
 ```
 
 ### Database Operations
