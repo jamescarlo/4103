@@ -45,7 +45,7 @@ griffon-app
         └── db.conf
 ```
 
-db.conf
+```db.conf```
 ```
 HOST = secret
 USERNAME = secret
