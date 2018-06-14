@@ -11,3 +11,5 @@
 ###  ###
 .project
 .classpath
+### env ###
+/griffon-app/resources/db.conf
