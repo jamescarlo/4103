@@ -1,6 +1,6 @@
 # griffon-start
 Special mention to [@sniper4627](https://github.com/sniper4627) [@unresistable](https://github.com/unresistable)  
-Thanks to these people who help in building this awesomeness! :hearts:
+These people are awesome! :hearts:
 
 ### Requirements
 * Java SE Development Kit
