@@ -55,7 +55,7 @@ DATABASE = secret
 
 ### Database Operations
 1. Fetch data
-   ```
+   ```java
    // Create a query object
    MultiMap query = dbquery.map();
    
@@ -74,7 +74,7 @@ DATABASE = secret
    util.toast(results.get(0).get("color"));
    ```
 2. Insert data
-   ```
+   ```java
    // Create a query object
    MultiMap query = dbquery.map();
    
@@ -87,7 +87,7 @@ DATABASE = secret
    dbquery.save(query);
    ```
 3. Update data
-   ```
+   ```java
    // Create a query object
    MultiMap query = dbquery.map();
    
@@ -101,7 +101,7 @@ DATABASE = secret
    dbquery.update(query);
    ```
 4. Delete data
-   ```
+   ```java
    // Create a query object
    MultiMap query = dbquery.map();
    
