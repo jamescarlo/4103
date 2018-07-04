@@ -28,6 +28,6 @@ public class AppController extends AbstractGriffonController {
 
     @ControllerAction
     public void click() {
-        util.toggleView("app", "login");   
+        util.toggleView("app", "login");
     }
 }
