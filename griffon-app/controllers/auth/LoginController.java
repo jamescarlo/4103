@@ -72,6 +72,9 @@ public class LoginController extends AbstractGriffonController {
             util.toggleView("login", "app");
         }else {
 
+            /*
+             * Display a message
+             */
             util.toast("Failed to Log In");
         }
 
