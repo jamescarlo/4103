@@ -1,7 +1,7 @@
 <p align="center">
     <img
       alt="project-rem"
-      src="https://imgur.com/a/CkcfhIK"
+      src="https://imgur.com/7uAiM3X"
       width="400"
     />
 </p>
