@@ -1,5 +1,4 @@
-
-package test;
+package rem;
 
 import griffon.core.artifact.GriffonService;
 import griffon.core.resources.ResourceHandler;

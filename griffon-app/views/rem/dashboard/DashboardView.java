@@ -21,9 +21,6 @@ public class DashboardView extends AbstractJavaFXGriffonView {
     private DashboardController controller;
     private DashboardModel model;
 
-    @FXML
-    private Label clickLabel;
-
     @MVCMember
     public void setController(@Nonnull DashboardController controller) {
         this.controller = controller;
@@ -50,7 +47,7 @@ public class DashboardView extends AbstractJavaFXGriffonView {
         scene.setFill(Color.WHITE);
 
         Node node = loadFromFXML();
-        model.clickCountProperty().bindBidirectional(clickLabel.textProperty());
+        //model.clickCountProperty().bindBidirectional(clickLabel.textProperty());
         if (node instanceof Parent) {
             scene.setRoot((Parent) node);
         } else {
