@@ -2,7 +2,7 @@
     <img
       alt="project-rem"
       src="https://imgur.com/7uAiM3X.png"
-      width="400"
+      width="960"
     />
 </p>
 
