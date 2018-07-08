@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="793.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
+   <children>
+      <Button fx:id="closeActionTarget" cancelButton="true" ellipsisString="X" layoutX="767.0" layoutY="2.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="25.0" text="X" textAlignment="CENTER" textFill="#535353" />
+      <AnchorPane fx:id="LoginRightContainer" layoutX="377.0" layoutY="116.0" prefHeight="310.0" prefWidth="379.0">
+         <children>
+            <Button fx:id="loginActionTarget" defaultButton="true" layoutX="70.0" layoutY="201.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="#535353">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label layoutX="150.0" layoutY="248.0" text="Forgot password?" textFill="#535353" underline="true" />
+            <Label layoutX="135.0" layoutY="49.0" text="Sign In" textFill="#d2d2da">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="69.0" layoutY="112.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
+            <PasswordField fx:id="password" layoutX="69.0" layoutY="155.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
+            <ImageView fitHeight="138.0" fitWidth="140.0" layoutX="118.0" layoutY="-72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logos/user.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Reflection fraction="0.65" topOpacity="0.61" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="12.0" layoutY="120.0" text="Welcome to community" textFill="#fcfcfc" underline="true">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="271.0" text="Design by Joshua Apellido" textFill="#d2d2da" />
+      <Button fx:id="registerActionTarget" layoutX="15.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="REGISTER" textFill="#535353">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="15.0" layoutY="173.0" text="GRIFFON-APP" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="216.0" text="CAPSTONE" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
