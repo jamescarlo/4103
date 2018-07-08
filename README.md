@@ -1,3 +1,11 @@
+<p align="center">
+    <img
+      alt="project-rem"
+      src="https://imgur.com/a/CkcfhIK"
+      width="400"
+    />
+</p>
+
 # project-rem
 
 ### Requirements
