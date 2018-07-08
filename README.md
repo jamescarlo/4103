@@ -1,4 +1,4 @@
-# griffon-start
+# project-rem
 
 ### Requirements
 * Java SE Development Kit
