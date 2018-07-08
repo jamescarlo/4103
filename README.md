@@ -13,28 +13,9 @@
 
 ### Quick Start
 ```
-git clone https://github.com/ivan-ortiz/griffon-start.git
+git clone https://github.com/ivan-ortiz/project-rem.git
 cd griffon-start
 gradlew run
-```
-
-### MVC Structure
-```
-griffon-app
-    ├── conf
-    |   └── Config.java         # Define MVC groups
-    ├── controllers             # Contains all controllers
-    |   ├── auth                # Contains controllers (Login, Register)
-    |   └── org
-    ├── models                  # Contains all models
-    |   ├── auth                # Contains models (Login, Register)
-    |   └── org
-    ├── resources               # Contains properties & FXML files
-    |   ├── auth                # Contains FXML files (Login, Register)
-    |   └── org
-    └── views                   # Contains all views
-        ├── auth                # Contains views (Login, Register)
-        └── org
 ```
 
 ### Database Connection
