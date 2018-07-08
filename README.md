@@ -22,8 +22,8 @@
 ### Quick Start
 ```
 git clone https://github.com/ivan-ortiz/project-rem.git
-cd griffon-start
-gradlew run
+cd project-rem
+gradle run
 ```
 
 ### Database Connection
