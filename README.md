@@ -103,5 +103,5 @@ DATABASE = secret
    dbquery.delete(query);
    ```
    
-### Samples
-1. Please put something
+
+
