@@ -32,9 +32,11 @@ public class DashboardView extends AbstractJavaFXGriffonView {
         this.model = model;
     }
 
+    public Stage stage;
+
     @Override
     public void initUI() {
-        Stage stage = (Stage) getApplication()
+        stage = (Stage) getApplication()
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
         stage.initStyle(StageStyle.UNDECORATED);

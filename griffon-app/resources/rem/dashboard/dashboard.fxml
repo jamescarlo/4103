@@ -50,6 +50,7 @@
             </ImageView>
          </children>
       </Pane>
+      <AnchorPane layoutX="221.0" layoutY="32.0" prefHeight="605.0" prefWidth="938.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
       <Pane layoutY="36.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="221.0" style="-fx-background-color: #274060;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutY="140.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="221.0" style="-fx-background-color: #335C81;" textFill="WHITE">
