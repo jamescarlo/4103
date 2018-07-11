@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.codehaus.griffon.runtime.javafx.artifact.AbstractJavaFXGriffonView;
+import javafx.stage.StageStyle;
 
 import java.util.Collections;
 import javax.annotation.Nonnull;
@@ -36,6 +37,7 @@ public class DashboardView extends AbstractJavaFXGriffonView {
         Stage stage = (Stage) getApplication()
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(init());
         stage.sizeToScene();
         getApplication().getWindowManager().attach("dashboard", stage);

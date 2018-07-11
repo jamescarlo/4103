@@ -9,9 +9,15 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
+import javax.inject.Inject;
+import rem.Util;
+
 @ArtifactProviderFor(GriffonController.class)
 public class DashboardController extends AbstractGriffonController {
     private DashboardModel model;
+
+    @Inject
+    private Util util;
 
     @MVCMember
     public void setModel(@Nonnull DashboardModel model) {
@@ -20,8 +26,19 @@ public class DashboardController extends AbstractGriffonController {
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    public void click() {
-        int count = Integer.parseInt(model.getClickCount());
-        model.setClickCount(String.valueOf(count + 1));
+    public void minimize_window() {
+        util.toast("Minimize Window");
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void maximize_window() {
+        util.toast("Maximize Window");
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void close_window() {
+        util.toast("Close Window");
     }
 }

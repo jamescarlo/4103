@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,35 +15,35 @@
    <children>
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button layoutX="1040.0" minWidth="53.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="53.0" />
+            <Button fx:id="minimize_windowActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" />
             <ImageView layoutX="1039.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_24px_1.png" />
                </image>
             </ImageView>
-            <Button layoutX="978.0" layoutY="-4.0" minWidth="53.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="53.0" />
+            <Button fx:id="maximize_windowActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
             <ImageView layoutX="974.0" layoutY="7.0">
                <image>
                   <Image url="@../auth/logos/icons8_Minus_24px_3.png" />
                </image>
             </ImageView>
-            <Button layoutX="1098.0" layoutY="-4.0" minHeight="10.0" minWidth="53.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="53.0" />
+            <Button fx:id="close_windowActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
             <ImageView layoutX="1106.0" layoutY="7.0">
                <image>
                   <Image url="@../auth/logos/icons8_Delete_24px_3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="1062.0" layoutY="6.0">
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="1090.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_16px.png" />
                </image>
             </ImageView>
-            <ImageView fitWidth="16.0" layoutX="1109.0" layoutY="5.0">
+            <ImageView fitWidth="16.0" layoutX="1127.0" layoutY="7.0">
                <image>
                   <Image url="@../auth/logos/icons8_Delete_16px.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="1011.0" layoutY="6.0">
+            <ImageView layoutX="1049.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Minus_16px.png" />
                </image>
@@ -54,37 +57,54 @@
                   <Font size="19.0" />
                </font>
             </Button>
-            <ImageView layoutX="6.0" layoutY="78.0">
+            <ImageView layoutX="14.0" layoutY="79.0">
                <image>
                   <Image url="@../auth/logos/icons8_User_48px_2.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="14.0" layoutY="155.0">
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="18.0" layoutY="160.0" opacity="0.9">
                <image>
                   <Image url="@../auth/logos/icons8_Dashboard_48px_2.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="74.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User">
+            <Text fill="WHITE" layoutX="68.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="James Caipang">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="68.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+            <Text fill="WHITE" layoutX="68.0" layoutY="188.0" opacity="0.9" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="15.0" layoutY="349.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Test" />
-         </children></Pane>
-      <Pane layoutX="460.0" layoutY="145.0" prefHeight="262.0" prefWidth="541.0" style="-fx-background-color: #000000;">
-         <children>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="95.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greetings From Griffon Dev" textAlignment="CENTER">
+            <Button layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Asset Management" textFill="#ffffffe7">
                <font>
-                  <Font name="Verdana Bold Italic" size="24.0" />
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font></Button>
+            <Button layoutX="15.0" layoutY="308.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Asset Management" textFill="#ffffffe7">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
                </font>
-            </Text>
-            <Text fill="WHITE" layoutX="393.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed By James" />
-         </children>
-      </Pane>
+            </Button>
+            <MenuBar layoutX="2.0" layoutY="2.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children></Pane>
    </children>
 </AnchorPane>
