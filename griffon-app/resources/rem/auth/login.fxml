@@ -19,7 +19,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Label layoutX="150.0" layoutY="248.0" text="Forgot password?" textFill="#535353" underline="true" />
+            <Label layoutX="150.0" layoutY="248.0" text="Forgot password?" textFill="WHITE" underline="true" />
             <Label layoutX="135.0" layoutY="49.0" text="Sign In" textFill="#d2d2da">
                <font>
                   <Font name="System Bold" size="30.0" />
