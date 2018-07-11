@@ -1,11 +1,11 @@
 #LoginForm{
     -fx-background-color:#274060;
-  
+
 }
 /*BUTTONS*/
 #closeActionTarget,#loginActionTarget,#registerActionTarget{
 
-    -fx-Background-color:rgba(167, 250, 117, 1);
+    -fx-Background-color:#65AFFF;
     -fx-font-weight:bold;
 }
 #LoginRightContainer{
