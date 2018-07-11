@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,41 +10,51 @@
 
 <AnchorPane fx:id="Dashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1159.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.dashboard.DashboardController">
    <children>
-      <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
+      <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button layoutX="1024.0" layoutY="4.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="52.0" />
+            <Button layoutX="1040.0" minWidth="53.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="53.0" />
             <ImageView layoutX="1039.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_24px_1.png" />
                </image>
             </ImageView>
-            <Button layoutX="953.0" layoutY="4.0" minWidth="32.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="32.0" />
+            <Button layoutX="978.0" layoutY="-4.0" minWidth="53.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="53.0" />
             <ImageView layoutX="974.0" layoutY="7.0">
                <image>
                   <Image url="@../auth/logos/icons8_Minus_24px_3.png" />
                </image>
             </ImageView>
-            <Button layoutX="1091.0" layoutY="4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" />
+            <Button layoutX="1098.0" layoutY="-4.0" minHeight="10.0" minWidth="53.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="53.0" />
             <ImageView layoutX="1106.0" layoutY="7.0">
                <image>
                   <Image url="@../auth/logos/icons8_Delete_24px_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="1062.0" layoutY="6.0">
+               <image>
+                  <Image url="@../auth/logos/icons8_Virtual_Machine_16px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitWidth="16.0" layoutX="1109.0" layoutY="5.0">
+               <image>
+                  <Image url="@../auth/logos/icons8_Delete_16px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="1011.0" layoutY="6.0">
+               <image>
+                  <Image url="@../auth/logos/icons8_Minus_16px.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
       <Pane layoutY="36.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="221.0" style="-fx-background-color: #274060;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ChoiceBox layoutX="14.0" layoutY="469.0" prefHeight="49.0" prefWidth="194.0" style="-fx-background-color: #335C81;" />
-            <ChoiceBox layoutX="14.0" layoutY="396.0" prefHeight="49.0" prefWidth="194.0" style="-fx-background-color: #335C81;" />
-            <ChoiceBox layoutX="14.0" layoutY="325.0" prefHeight="49.0" prefWidth="194.0" style="-fx-background-color: #335C81;" />
-            <ChoiceBox layoutX="14.0" layoutY="255.0" prefHeight="49.0" prefWidth="194.0" style="-fx-background-color: #335C81;" />
-            <ChoiceBox layoutX="14.0" layoutY="537.0" prefHeight="49.0" prefWidth="194.0" style="-fx-background-color: #335C81;" />
             <Button layoutY="140.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="221.0" style="-fx-background-color: #335C81;" textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <ImageView layoutX="6.0" layoutY="76.0">
+            <ImageView layoutX="6.0" layoutY="78.0">
                <image>
                   <Image url="@../auth/logos/icons8_User_48px_2.png" />
                </image>
@@ -55,13 +64,7 @@
                   <Image url="@../auth/logos/icons8_Dashboard_48px_2.png" />
                </image>
             </ImageView>
-            <Button layoutX="1.0" layoutY="10.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="59.0" text="Button" />
-            <ImageView fitWidth="32.0" layoutX="15.0" layoutY="10.0">
-               <image>
-                  <Image url="@../auth/logos/icons8_Back_Arrow_32px_1.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="49.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User">
+            <Text fill="WHITE" layoutX="74.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User">
                <font>
                   <Font size="14.0" />
                </font>
@@ -71,6 +74,7 @@
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Text>
+            <Button layoutX="15.0" layoutY="349.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Test" />
          </children></Pane>
       <Pane layoutX="460.0" layoutY="145.0" prefHeight="262.0" prefWidth="541.0" style="-fx-background-color: #000000;">
          <children>
