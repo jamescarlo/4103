@@ -39,7 +39,7 @@ public class DBQuery extends AbstractGriffonService {
 
     static {
         try {
-            InputStream stream = new DBQuery().getClass().getResourceAsStream("/db.conf");
+            InputStream stream = new DBQuery().getClass().getResourceAsStream("/db.config");
             BufferedReader br = new BufferedReader(new InputStreamReader(stream));
             String line = br.readLine();
             while (line != null) {
