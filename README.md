@@ -27,14 +27,14 @@ gradle run
 ```
 
 ### Database Connection
-Create a file ```db.conf``` in resources folder
+Create a file ```db.config``` in resources folder
 ```
 griffon-app
     └── resources               
-        └── db.conf
+        └── db.config
 ```
 
-File ```db.conf```
+File ```db.config```
 ```
 HOST = secret
 USERNAME = secret
