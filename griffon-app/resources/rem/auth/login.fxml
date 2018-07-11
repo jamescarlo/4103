@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="793.0" stylesheets="@./css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="793.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
    <children>
       <Button fx:id="closeActionTarget" cancelButton="true" ellipsisString="X" layoutX="767.0" layoutY="2.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="25.0" text="X" textAlignment="CENTER" textFill="#535353" />
       <AnchorPane fx:id="LoginRightContainer" layoutX="377.0" layoutY="116.0" prefHeight="310.0" prefWidth="379.0">
