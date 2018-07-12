@@ -56,10 +56,10 @@ DATABASE = secret
    // Store results in a map
    Map<String, Map> results = dbquery.get(query);
    
-   /// Display total results
+   // Display total results
    util.toast(results.size());
    
-   /. Display the first data
+   // Display the first data
    util.toast(results.get(0).get("color"));
    ```
 2. Insert data
