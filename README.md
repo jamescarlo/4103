@@ -6,7 +6,7 @@
     />
 </p>
 
-# project-rem
+# Real Estate Management
 
 ### Requirements
 * Java SE Development Kit
