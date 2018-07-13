@@ -1,12 +1,4 @@
-<p align="center">
-    <img
-      alt=""
-      src=""
-      width="960"
-    />
-</p>
-
-# Real Estate Management
+# Griffon
 
 ### Requirements
 * Java SE Development Kit
