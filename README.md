@@ -1,7 +1,7 @@
 <p align="center">
     <img
       alt="project-rem"
-      src="https://imgur.com/7uAiM3X.png"
+      src=""
       width="960"
     />
 </p>
@@ -21,8 +21,8 @@
 
 ### Quick Start
 ```
-git clone https://github.com/ivan-ortiz/project-rem.git
-cd project-rem
+git clone https://github.com/ivan-ortiz/4103.git
+cd 4103
 gradle run
 ```
 
