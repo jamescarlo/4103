@@ -1,6 +1,6 @@
 <p align="center">
     <img
-      alt="project-rem"
+      alt=""
       src=""
       width="960"
     />
