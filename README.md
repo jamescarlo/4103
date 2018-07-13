@@ -1,4 +1,4 @@
-# Griffon
+# Get Started
 
 ### Requirements
 * Java SE Development Kit
