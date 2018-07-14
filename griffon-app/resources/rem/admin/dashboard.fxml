@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,23 +15,8 @@
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>
             <Button fx:id="minimize_windowActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" />
-            <ImageView layoutX="1039.0" layoutY="8.0">
-               <image>
-                  <Image url="@../auth/logos/icons8_Virtual_Machine_24px_1.png" />
-               </image>
-            </ImageView>
             <Button fx:id="maximize_windowActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
-            <ImageView layoutX="974.0" layoutY="7.0">
-               <image>
-                  <Image url="@../auth/logos/icons8_Minus_24px_3.png" />
-               </image>
-            </ImageView>
             <Button fx:id="close_windowActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
-            <ImageView layoutX="1106.0" layoutY="7.0">
-               <image>
-                  <Image url="@../auth/logos/icons8_Delete_24px_3.png" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="1090.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_16px.png" />
@@ -43,15 +27,15 @@
                   <Image url="@../auth/logos/icons8_Delete_16px.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="1049.0" layoutY="8.0">
+            <ImageView layoutX="1048.0" layoutY="6.0">
                <image>
-                  <Image url="@../auth/logos/icons8_Minus_16px.png" />
+                  <Image url="@../auth/logos/icons8_Minus_16px_1.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <AnchorPane layoutX="221.0" layoutY="32.0" prefHeight="605.0" prefWidth="938.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
-      <Pane layoutY="36.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="221.0" style="-fx-background-color: #274060;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="209.0" layoutY="32.0" prefHeight="604.0" prefWidth="885.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="32.0" />
+      <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="221.0" style="-fx-background-color: #274060;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutY="140.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="221.0" style="-fx-background-color: #335C81;" textFill="WHITE">
                <font>
@@ -78,7 +62,7 @@
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Asset Management" textFill="#ffffffe7">
+            <Button fx:id="module1" layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Asset Management" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font></Button>
@@ -87,25 +71,18 @@
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
             </Button>
-            <MenuBar layoutX="2.0" layoutY="2.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
+            <MenuButton mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #274060;" text="Account" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Sign Out" />
+                <MenuItem mnemonicParsing="false" text="Account Settings" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="108.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #274060;" text="Demos" textFill="WHITE">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Tutorials" />
+                  <MenuItem mnemonicParsing="false" text="Etc" />
+               </items>
+            </MenuButton>
          </children></Pane>
    </children>
 </AnchorPane>
