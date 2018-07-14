@@ -13,23 +13,23 @@
 <AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="529.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
    <children>
       <Button fx:id="closeActionTarget" cancelButton="true" ellipsisString="X" layoutX="767.0" layoutY="2.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="25.0" text="X" textAlignment="CENTER" textFill="#535353" />
-      <AnchorPane fx:id="LoginRightContainer" layoutX="86.0" layoutY="105.0" prefHeight="310.0" prefWidth="379.0">
+      <AnchorPane fx:id="LoginRightContainer" layoutX="86.0" layoutY="36.0" prefHeight="379.0" prefWidth="379.0">
          <children>
-            <Button fx:id="loginActionTarget" defaultButton="true" layoutX="70.0" layoutY="201.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="#535353">
+            <Button fx:id="loginActionTarget" defaultButton="true" layoutX="64.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="#535353">
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Label layoutX="150.0" layoutY="248.0" text="Forgot password?" textFill="WHITE" underline="true" />
-            <Label layoutX="138.0" layoutY="49.0" text="Sign In" textFill="#d2d2da">
+            <Label layoutX="144.0" layoutY="315.0" text="Forgot password?" textFill="WHITE" underline="true" />
+            <Label layoutX="139.0" layoutY="120.0" text="Sign In" textFill="#d2d2da">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="69.0" layoutY="112.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
-            <PasswordField fx:id="password" layoutX="69.0" layoutY="155.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
-            <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="127.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="63.0" layoutY="179.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
+            <PasswordField fx:id="password" layoutX="63.0" layoutY="222.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
+            <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="132.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logos/REM4.png" />
+                  <Image url="@logos/NewRem.png" />
                </image>
             </ImageView>
          </children>
