@@ -1,4 +1,4 @@
-package rem.dashboard;
+package rem.admin;
 
 import griffon.core.artifact.GriffonModel;
 import griffon.metadata.ArtifactProviderFor;

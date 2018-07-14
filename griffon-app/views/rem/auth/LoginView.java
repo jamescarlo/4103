@@ -57,9 +57,9 @@ public class LoginView extends AbstractJavaFXGriffonView {
         Stage stage = (Stage) getApplication()
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
-        stage.initStyle(StageStyle.UNDECORATED);
+        //stage.initStyle(StageStyle.UNDECORATED);
+        stage.setMaximized(true);
         stage.setScene(init());
-        stage.sizeToScene();
         getApplication().getWindowManager().attach("login", stage);
 
     }

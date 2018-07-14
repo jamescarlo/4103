@@ -8,34 +8,40 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="529.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
+
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="760.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
    <children>
-      <Button fx:id="closeActionTarget" cancelButton="true" ellipsisString="X" layoutX="767.0" layoutY="2.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="25.0" text="X" textAlignment="CENTER" textFill="#535353" />
-      <AnchorPane fx:id="LoginRightContainer" layoutX="86.0" layoutY="36.0" prefHeight="379.0" prefWidth="379.0">
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="191.0" layoutY="114.0" prefHeight="416.0" prefWidth="516.0" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="114.0">
          <children>
-            <Button fx:id="loginActionTarget" defaultButton="true" layoutX="64.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="LOGIN" textFill="#535353">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Label layoutX="144.0" layoutY="315.0" text="Forgot password?" textFill="WHITE" underline="true" />
-            <Label layoutX="139.0" layoutY="120.0" text="Sign In" textFill="#d2d2da">
-               <font>
-                  <Font name="System Bold" size="30.0" />
-               </font>
-            </Label>
-            <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="63.0" layoutY="179.0" prefHeight="25.0" prefWidth="252.0" promptText="USERNAME" />
-            <PasswordField fx:id="password" layoutX="63.0" layoutY="222.0" prefHeight="25.0" prefWidth="252.0" promptText="PASSWORD" />
-            <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="132.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@logos/NewRem.png" />
-               </image>
-            </ImageView>
+            <AnchorPane fx:id="LoginRightContainer" maxHeight="379.0" maxWidth="379.0" opacity="0.66" prefHeight="379.0" prefWidth="379.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Button fx:id="loginActionTarget" defaultButton="true" layoutX="64.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="Log In" textFill="#535353">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="144.0" layoutY="315.0" text="Forgot password?" textFill="WHITE" underline="true" />
+                  <Label layoutX="143.0" layoutY="120.0" text="Log In" textFill="#d2d2da">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="63.0" layoutY="179.0" prefHeight="25.0" prefWidth="252.0" promptText="Username" />
+                  <PasswordField fx:id="password" layoutX="63.0" layoutY="222.0" prefHeight="25.0" prefWidth="252.0" promptText="Password" />
+                  <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="132.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logos/NewRem.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <Reflection fraction="0.65" topOpacity="0.61" />
+               </effect>
+            </AnchorPane>
          </children>
-         <effect>
-            <Reflection fraction="0.65" topOpacity="0.61" />
-         </effect>
-      </AnchorPane>
+      </FlowPane>
    </children>
 </AnchorPane>

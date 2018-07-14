@@ -27,9 +27,9 @@ public class Config extends AbstractMapResourceBundle {
                     .e("controller", "rem.auth.RegisterController")
                 )
                 .e("dashboard", map()
-                    .e("model", "rem.dashboard.DashboardModel")
-                    .e("view", "rem.dashboard.DashboardView")
-                    .e("controller", "rem.dashboard.DashboardController")
+                    .e("model", "rem.admin.DashboardModel")
+                    .e("view", "rem.admin.DashboardView")
+                    .e("controller", "rem.admin.DashboardController")
                 )
             );
     }

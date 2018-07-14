@@ -1,4 +1,4 @@
-package rem.dashboard;
+package rem.admin;
 
 import griffon.core.artifact.GriffonController;
 import griffon.core.controller.ControllerAction;

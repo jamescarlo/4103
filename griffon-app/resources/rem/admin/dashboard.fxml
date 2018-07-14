@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Dashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1159.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.dashboard.DashboardController">
+<AnchorPane fx:id="Dashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1159.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.admin.DashboardController">
    <children>
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>

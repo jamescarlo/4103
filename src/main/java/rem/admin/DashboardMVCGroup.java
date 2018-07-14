@@ -1,4 +1,4 @@
-package rem.dashboard;
+package rem.admin;
 
 import javax.inject.Named;
 import griffon.core.mvc.MVCGroup;
