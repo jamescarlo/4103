@@ -13,6 +13,7 @@ import griffon.inject.MVCMember;
 import javax.inject.Inject;
 import rem.Util;
 import rem.DBQuery;
+import rem.PasswordHash;
 import java.util.Map;
 import org.apache.commons.collections4.MultiMap;
 
@@ -26,12 +27,10 @@ public class LoginController extends AbstractGriffonController {
         this.model = model;
     }
 
-
     @MVCMember
     public void setView(@Nonnull LoginView view) {
         this.view = view;
     }
-
 
     @Inject
     private Util util;
@@ -39,59 +38,45 @@ public class LoginController extends AbstractGriffonController {
     @Inject
     private DBQuery dbquery;
 
+    @Inject
+    private PasswordHash pwhash;
 
     @ControllerAction
     public void login() {
-
         /**
          * Get username from LoginView
          */
         String username = view.username.getText();
-
         /**
          * Get password from LoginView
          */
         String password = view.password.getText();
 
-
         MultiMap query = dbquery.map();
         query.put("table",         "users");
         query.put("condition",     "username = "+ username);
-        query.put("condition:and", "password = "+ password);
 
         Map<String, Map> data = dbquery.get(query);
-
         /**
          * Check if account exist
          */
-        if(data.size() != 0) {
-
+        if (data.size() != 0) {
             /**
-             * Hide LoginView and Show AppView
+             * Check if password match
              */
-            util.toggleView("login", "dashboard");
-        }else {
-
-            /**
-             * Display a message
-             */
-            util.toast("Failed to Log In");
+            Boolean match = false;
+            try {
+                match = pwhash.verifyPassword(password, data.get(0).get("password") +"");
+            } catch(Exception e) {}
+            
+            if (match) {
+                util.toggleView("login", "dashboard");  
+            } else {
+                util.toast("Password does not match");
+            }
+        } else {
+            util.toast("Username does not exist");
         }
     }
 
-
-    @ControllerAction
-    public void close() {
-
-        /**
-         * Close application
-         */
-        getApplication().shutdown();
-    }
-
-    @ControllerAction
-    public void register(){
-    }
-
-  
 }
