@@ -8,6 +8,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -16,6 +17,8 @@ import javafx.stage.StageStyle;
 
 import java.util.Collections;
 import javax.annotation.Nonnull;
+import java.util.Map;
+
 
 @ArtifactProviderFor(GriffonView.class)
 public class DashboardView extends AbstractJavaFXGriffonView {
@@ -33,6 +36,10 @@ public class DashboardView extends AbstractJavaFXGriffonView {
     }
 
     public Stage stage;
+
+    @FXML
+    public AnchorPane main;
+
 
     @Override
     public void initUI() {

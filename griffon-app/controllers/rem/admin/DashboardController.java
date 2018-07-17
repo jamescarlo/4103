@@ -13,6 +13,8 @@ import javax.inject.Inject;
 import rem.Util;
 import javafx.stage.Screen;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Node;
+import javafx.fxml.FXMLLoader;
 
 @ArtifactProviderFor(GriffonController.class)
 public class DashboardController extends AbstractGriffonController {
@@ -82,20 +84,31 @@ public class DashboardController extends AbstractGriffonController {
         view.stage.close();
     }
 
-    public void open_module(String module_name) {
-        util.toast(module_name);
+    private String last_opened_module = "";
+
+    private void open_module(String module_name) {
+        try {
+            createMVCGroup(module_name);
+
+            if (last_opened_module != "") {
+                getApplication().getMvcGroupManager().findGroup(last_opened_module).destroy();
+            }
+            last_opened_module = module_name;
+        } catch(Exception e) {
+            System.out.println(e);
+        }
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module1() {
-        open_module("TEST");
+        open_module("warehouse");
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module2() {
-        open_module("TEST 2");
+        open_module("howtopopulatetable");
     }
 
     @ControllerAction

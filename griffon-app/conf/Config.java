@@ -31,6 +31,16 @@ public class Config extends AbstractMapResourceBundle {
                     .e("view", "rem.admin.DashboardView")
                     .e("controller", "rem.admin.DashboardController")
                 )
+                .e("warehouse", map()
+                    .e("model", "rem.modules.logistic_2.WarehouseModel")
+                    .e("view", "rem.modules.logistic_2.WarehouseView")
+                    .e("controller", "rem.modules.logistic_2.WarehouseController")
+                )
+                .e("howtopopulatetable", map()
+                    .e("model", "rem.demos.HowToPopulateTableModel")
+                    .e("view", "rem.demos.HowToPopulateTableView")
+                    .e("controller", "rem.demos.HowToPopulateTableController")
+                )
             );
     }
 }
