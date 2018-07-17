@@ -42,6 +42,7 @@ public class LoginController extends AbstractGriffonController {
     private PasswordHash pwhash;
 
     @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void login() {
         /**
          * Get username from LoginView

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -10,13 +11,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Dashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1159.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.admin.DashboardController">
+<AnchorPane fx:id="Dashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1159.0" style="-fx-background-color: #0000;" styleClass="bord" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.admin.DashboardController">
    <children>
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="minimize_windowActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" />
-            <Button fx:id="maximize_windowActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
-            <Button fx:id="close_windowActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
+            <Button fx:id="minimizeActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" />
+            <Button fx:id="maximizeActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
+            <Button fx:id="closeActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
             <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="1090.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_16px.png" />
@@ -34,7 +35,7 @@
             </ImageView>
          </children>
       </Pane>
-      <AnchorPane layoutX="209.0" layoutY="32.0" prefHeight="604.0" prefWidth="885.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="32.0" />
+      <AnchorPane layoutX="209.0" layoutY="32.0" prefHeight="604.0" prefWidth="950.0" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #CCCCCC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="221.0" style="-fx-background-color: #274060;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutY="140.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="221.0" style="-fx-background-color: #335C81;" textFill="WHITE">
@@ -62,27 +63,57 @@
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="module1" layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Asset Management" textFill="#ffffffe7">
-               <font>
-                  <Font name="SansSerif Regular" size="14.0" />
-               </font></Button>
-            <Button layoutX="15.0" layoutY="308.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Asset Management" textFill="#ffffffe7">
+            <Button fx:id="module1ActionTarget" layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 1" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="module2ActionTarget" layoutX="15.0" layoutY="308.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 2" textFill="#ffffffe7">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <MenuButton mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #274060;" text="Account" textFill="WHITE">
+            <MenuButton layoutX="6.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="76.0" style="-fx-background-color: #274060;" text="Account" textFill="#ffffffe5">
               <items>
-                <MenuItem mnemonicParsing="false" text="Sign Out" />
                 <MenuItem mnemonicParsing="false" text="Account Settings" />
+                <MenuItem mnemonicParsing="false" text="Log Out" />
               </items>
             </MenuButton>
-            <MenuButton layoutX="108.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #274060;" text="Demos" textFill="WHITE">
+            <MenuButton layoutX="82.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="70.0" style="-fx-background-color: #274060;" text="Demos" textFill="#ffffffe5">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Tutorials" />
-                  <MenuItem mnemonicParsing="false" text="Etc" />
+                  <MenuItem mnemonicParsing="false" text="Populating a table" />
+                  <MenuItem mnemonicParsing="false" text="Displaying a window message" />
                </items>
             </MenuButton>
+            <Button fx:id="module3ActionTarget" layoutX="15.0" layoutY="372.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 3" textFill="#ffffffe7">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="module4ActionTarget" layoutX="15.0" layoutY="436.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 4" textFill="#ffffffe7">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="module5ActionTarget" layoutX="15.0" layoutY="500.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 5" textFill="#ffffffe7">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children></Pane>
    </children>
 </AnchorPane>

@@ -34,13 +34,13 @@ public class DashboardController extends AbstractGriffonController {
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    public void minimize_window() {
+    public void minimize() {
         view.stage.setIconified(true);
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    public void maximize_window() {
+    public void maximize() {
         toggleSize();
     }
 
@@ -78,7 +78,41 @@ public class DashboardController extends AbstractGriffonController {
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    public void close_window() {
+    public void close() {
         view.stage.close();
+    }
+
+    public void open_module(String module_name) {
+        util.toast(module_name);
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void module1() {
+        open_module("TEST");
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void module2() {
+        open_module("TEST 2");
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void module3() {
+        open_module("TEST 3");
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void module4() {
+        open_module("TEST 4");
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void module5() {
+        open_module("TEST 5");
     }
 }
