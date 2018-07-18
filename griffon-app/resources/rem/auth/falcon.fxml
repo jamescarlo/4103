@@ -4,44 +4,64 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="760.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1517.0" style="-fx-background-color: #fffff;" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
    <children>
-      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="191.0" layoutY="114.0" prefHeight="416.0" prefWidth="516.0" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="114.0">
+      <ImageView fitHeight="773.0" fitWidth="1697.0" layoutX="-181.0" layoutY="-28.0" opacity="0.85">
+         <image>
+            <Image url="@../../../../../../Users/James/Desktop/estatebg.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="543.0" layoutY="176.0" prefHeight="394.0" prefWidth="628.0" AnchorPane.rightAnchor="346.0">
          <children>
-            <AnchorPane fx:id="LoginRightContainer" maxHeight="379.0" maxWidth="379.0" opacity="0.66" prefHeight="379.0" prefWidth="379.0" style="-fx-background-color: #000000;">
+            <Pane prefHeight="394.0" prefWidth="228.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button fx:id="loginActionTarget" defaultButton="true" layoutX="64.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="Log In" textFill="#535353">
+                  <Text fill="#ffdb4d" layoutX="25.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Real Estate Management System" textAlignment="CENTER" wrappingWidth="178.00000977516174">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="17.0" />
                      </font>
-                  </Button>
-                  <Label layoutX="144.0" layoutY="315.0" text="Forgot password?" textFill="WHITE" underline="true" />
-                  <Label layoutX="143.0" layoutY="120.0" text="Log In" textFill="#d2d2da">
-                     <font>
-                        <Font name="System Bold" size="30.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="63.0" layoutY="179.0" prefHeight="25.0" prefWidth="252.0" promptText="Username" />
-                  <PasswordField fx:id="password" layoutX="63.0" layoutY="222.0" prefHeight="25.0" prefWidth="252.0" promptText="Password" />
-                  <ImageView fitHeight="109.0" fitWidth="123.0" layoutX="132.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                  </Text>
+                  <ImageView fitHeight="109.0" fitWidth="141.0" layoutX="51.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@logos/NewRem.png" />
                      </image>
                   </ImageView>
+                  <Text layoutX="17.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© Griffon Developers 2018 All Rights Reserved." textAlignment="CENTER" wrappingWidth="178.00000624358654" />
                </children>
-               <effect>
-                  <Reflection fraction="0.65" topOpacity="0.61" />
-               </effect>
-            </AnchorPane>
+            </Pane>
+            <Pane layoutX="228.0" opacity="0.9" prefHeight="394.0" prefWidth="400.0" style="-fx-background-color: #335C81;" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="28.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="133.0" layoutY="311.0" text="Forgot password?" textFill="WHITE" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginActionTarget" defaultButton="true" layoutX="28.0" layoutY="224.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="340.0" text="Log In" textFill="#535353">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="password" layoutX="28.0" layoutY="169.0" prefHeight="35.0" prefWidth="340.0" />
+                  <Text fill="WHITE" layoutX="26.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="username" accessibleRole="PASSWORD_FIELD" layoutX="28.0" layoutY="102.0" prefHeight="35.0" prefWidth="340.0" />
+               </children>
+            </Pane>
          </children>
-      </FlowPane>
+      </AnchorPane>
    </children>
 </AnchorPane>
