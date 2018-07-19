@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="773.0" fitWidth="1697.0" layoutX="-181.0" layoutY="-28.0" opacity="0.85">
          <image>
-            <Image url="@../../../../../../Users/James/Desktop/estatebg.jpg" />
+            <Image url="@background_images/test.jpg" />
          </image>
       </ImageView>
       <AnchorPane layoutX="543.0" layoutY="176.0" prefHeight="394.0" prefWidth="628.0" AnchorPane.rightAnchor="346.0">
