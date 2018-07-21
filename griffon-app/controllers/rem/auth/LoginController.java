@@ -13,9 +13,12 @@ import griffon.inject.MVCMember;
 import javax.inject.Inject;
 import rem.Util;
 import rem.DBQuery;
+import rem.CipherCrypt;
 import rem.PasswordHash;
 import java.util.Map;
 import org.apache.commons.collections4.MultiMap;
+import java.lang.Byte;
+import java.util.Arrays;
 
 @ArtifactProviderFor(GriffonController.class)
 public class LoginController extends AbstractGriffonController {
@@ -37,6 +40,9 @@ public class LoginController extends AbstractGriffonController {
 
     @Inject
     private DBQuery dbquery;
+
+    @Inject 
+    private CipherCrypt ciphercrypt;
 
     @Inject
     private PasswordHash pwhash;
@@ -71,7 +77,11 @@ public class LoginController extends AbstractGriffonController {
             } catch(Exception e) {}
             
             if (match) {
-                util.toggleView("login", "dashboard");  
+                byte[] id = ciphercrypt.encrypt(data.get(0).get("id") +"");
+                System.out.println(Arrays.toString(id));
+                String test = ciphercrypt.decrypt(id);
+                System.out.println(test);
+                //util.toggleView("login", "dashboard");  
             } else {
                 util.toast("Password does not match");
             }
