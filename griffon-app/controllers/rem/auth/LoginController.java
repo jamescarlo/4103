@@ -13,6 +13,7 @@ import rem.Util;
 import rem.DBQuery;
 import rem.CipherCrypt;
 import rem.PasswordHash;
+import rem.Storage;
 
 import griffon.inject.MVCMember;
 import javax.inject.Inject;
@@ -39,11 +40,13 @@ public class LoginController extends AbstractGriffonController {
     @Inject
     private Util util;
     @Inject
-    private DBQuery dbquery;
+    private DBQuery db;
     @Inject 
     private CipherCrypt ciphercrypt;
     @Inject
     private PasswordHash pwhash;
+    @Inject
+    private Storage storage;
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
@@ -57,11 +60,11 @@ public class LoginController extends AbstractGriffonController {
          */
         String password = view.password.getText();
 
-        MultiMap query = dbquery.map();
+        MultiMap query = db.map();
         query.put("table",         "users");
         query.put("condition",     "username = "+ username);
 
-        Map<String, Map> data = dbquery.get(query);
+        Map<String, Map> data = db.get(query);
         /**
          * Check if account exist
          */
@@ -76,6 +79,7 @@ public class LoginController extends AbstractGriffonController {
             
             if (match) {
                 byte[] id = ciphercrypt.encrypt(data.get(0).get("id") +"");
+                Storage.saveItem("id", Arrays.toString(id));
                 //util.toggleView("login", "dashboard");  
             } else {
                 util.toast("Password does not match");
