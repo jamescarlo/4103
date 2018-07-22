@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.codehaus.griffon.runtime.javafx.artifact.AbstractJavaFXGriffonView;
 import javafx.stage.StageStyle;
@@ -18,7 +19,7 @@ import javafx.stage.StageStyle;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import java.util.Map;
-
+import javafx.scene.control.Button;
 
 @ArtifactProviderFor(GriffonView.class)
 public class DashboardView extends AbstractJavaFXGriffonView {
@@ -39,7 +40,18 @@ public class DashboardView extends AbstractJavaFXGriffonView {
 
     @FXML
     public AnchorPane main;
-
+    @FXML
+    public Text employee_name;
+    @FXML
+    public Button module1ActionTarget;
+    @FXML
+    public Button module2ActionTarget;
+    @FXML
+    public Button module3ActionTarget;
+    @FXML
+    public Button module4ActionTarget;
+    @FXML
+    public Button module5ActionTarget;
 
     @Override
     public void initUI() {

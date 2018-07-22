@@ -9,6 +9,7 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
+import rem.DBQuery;
 import rem.Util;
 import rem.Storage;
 import rem.CipherCrypt;
@@ -18,12 +19,17 @@ import javafx.stage.Screen;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.fxml.FXMLLoader;
+import java.util.Map;
+import java.util.HashMap;
+import org.apache.commons.collections4.MultiMap;
 
 @ArtifactProviderFor(GriffonController.class)
 public class DashboardController extends AbstractGriffonController {
     private DashboardModel model;
     private DashboardView view;
 
+    @Inject
+    private DBQuery db;
     @Inject
     private Util util;
     @Inject
@@ -34,12 +40,16 @@ public class DashboardController extends AbstractGriffonController {
     @MVCMember
     public void setModel(@Nonnull DashboardModel model) {
         this.model = model;
-        getUserData();
     }
 
     @MVCMember
     public void setView(@Nonnull DashboardView view) {
         this.view = view;
+    }
+
+    @Override
+    public void mvcGroupInit(@Nonnull Map<String, Object> args) {
+        updateComponents();
     }
 
     @ControllerAction
@@ -92,6 +102,13 @@ public class DashboardController extends AbstractGriffonController {
         view.stage.close();
     }
 
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    public void account() {
+        storage.saveItem("id", "");
+        util.toggleView("dashboard", "login");
+    }
+
     private String last_opened_module = "";
 
     private void open_module(String module_name) {
@@ -137,11 +154,58 @@ public class DashboardController extends AbstractGriffonController {
         open_module("TEST 5");
     }
 
-    public void getUserData() {
+    public String[] getModules(String role) {
+        Map<String, String[]> modules = new HashMap();
+
+        String[] logistic_2 = {
+            "Project Management", 
+            "Warehouse", 
+            "Procurement", 
+            "Asset Management"
+        };
+        modules.put("logistic2_admin", logistic_2);
+
+        return modules.get(role);
+    }
+
+    public void updateModulesButton(String[] modules) {
+        view.module1ActionTarget.setText(modules[0]);
+        view.module2ActionTarget.setText(modules[1]);
+        view.module3ActionTarget.setText(modules[2]);
+        view.module4ActionTarget.setText(modules[3]);
+
+        if (modules.length == 5) {
+            view.module5ActionTarget.setText(modules[4]);
+        } else {
+            view.module5ActionTarget.setVisible(false);
+        }
+    }
+
+    public void updateComponents() {
         //byte[] encrypted_id = (storage.getItem("id")).getBytes();
         //System.out.println(encrypted_id);
         //String id = ciphercrypt.decrypt(encrypted_id);
         //System.out.println(id);
         String id = storage.getItem("id");
+
+        MultiMap query = db.map();
+        query.put("table",         "employees");
+        query.put("condition",     "user_id = "+ id);
+
+        Map<String, Map> employee_data = db.get(query);
+
+        String employee_name = 
+            employee_data.get(0).get("first_name") +" "+
+            employee_data.get(0).get("last_name");
+        view.employee_name.setText(employee_name);
+
+        MultiMap query2 = db.map();
+        query2.put("table",         "users");
+        query2.put("condition",     "id = "+ id);
+
+        Map<String, Map> user_data = db.get(query2);
+        String[] modules = getModules(user_data.get(0).get("role") +"");
+        updateModulesButton(modules);
     }
+
 }

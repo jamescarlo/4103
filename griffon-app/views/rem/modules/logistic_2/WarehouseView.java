@@ -26,9 +26,6 @@ public class WarehouseView extends AbstractJavaFXGriffonView {
     @Nonnull 
     private DashboardView parentView;
 
-    @FXML
-    private Label clickLabel;
-
     @MVCMember
     public void setController(@Nonnull WarehouseController controller) {
         this.controller = controller;
@@ -47,7 +44,6 @@ public class WarehouseView extends AbstractJavaFXGriffonView {
     // build the UI
     private Node init() {
         Node node = loadFromFXML();
-        model.clickCountProperty().bindBidirectional(clickLabel.textProperty());
         connectActions(node, controller);
         connectMessageSource(node);
 

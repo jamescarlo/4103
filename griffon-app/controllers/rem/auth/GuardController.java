@@ -14,6 +14,7 @@ import rem.Storage;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
+import java.util.Map;
 
 @ArtifactProviderFor(GriffonController.class)
 public class GuardController extends AbstractGriffonController {
