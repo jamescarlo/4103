@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.codehaus.griffon.runtime.javafx.artifact.AbstractJavaFXGriffonView;
 
 import java.util.Collections;
@@ -39,6 +40,7 @@ public class GuardView extends AbstractJavaFXGriffonView {
         Stage stage = (Stage) getApplication()
             .createApplicationContainer(Collections.<String,Object>emptyMap());
         stage.setTitle(getApplication().getConfiguration().getAsString("application.title"));
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(init());
         stage.sizeToScene();
         getApplication().getWindowManager().attach("guard", stage);
@@ -50,7 +52,6 @@ public class GuardView extends AbstractJavaFXGriffonView {
         scene.setFill(Color.WHITE);
 
         Node node = loadFromFXML();
-        model.clickCountProperty().bindBidirectional(clickLabel.textProperty());
         if (node instanceof Parent) {
             scene.setRoot((Parent) node);
         } else {

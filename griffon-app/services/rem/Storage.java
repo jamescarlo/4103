@@ -41,17 +41,14 @@ public class Storage extends AbstractGriffonService {
         JSONParser parser = new JSONParser();
         try {
             Object obj = parser.parse(new FileReader(filepath));
-
             JSONObject jsonObject = (JSONObject) obj;
-            System.out.println(jsonObject);
-
             value = (String) jsonObject.get(key);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         } catch (ParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return value;
     }   	

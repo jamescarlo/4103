@@ -78,9 +78,11 @@ public class LoginController extends AbstractGriffonController {
             } catch(Exception e) {}
             
             if (match) {
-                byte[] id = ciphercrypt.encrypt(data.get(0).get("id") +"");
-                Storage.saveItem("id", Arrays.toString(id));
-                //util.toggleView("login", "dashboard");  
+                String id = data.get(0).get("id") +"";
+                //byte[] encrypted_id = ciphercrypt.encrypt(id);
+                //Storage.saveItem("id", encrypted_id +"");
+                Storage.saveItem("id", id);
+                util.toggleView("login", "dashboard");  
             } else {
                 util.toast("Password does not match");
             }

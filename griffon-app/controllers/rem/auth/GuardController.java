@@ -6,8 +6,14 @@ import griffon.inject.MVCMember;
 import griffon.metadata.ArtifactProviderFor;
 import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 
+import rem.Util;
+import rem.DBQuery;
+import rem.CipherCrypt;
+import rem.Storage;
+
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
+import javax.inject.Inject;
 
 @ArtifactProviderFor(GriffonController.class)
 public class GuardController extends AbstractGriffonController {
@@ -16,12 +22,24 @@ public class GuardController extends AbstractGriffonController {
     @MVCMember
     public void setModel(@Nonnull GuardModel model) {
         this.model = model;
+        guard();
     }
 
-    @ControllerAction
-    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
-    public void click() {
-        int count = Integer.parseInt(model.getClickCount());
-        model.setClickCount(String.valueOf(count + 1));
+    @Inject
+    private Util util;
+    @Inject
+    private DBQuery db;
+    @Inject 
+    private CipherCrypt ciphercrypt;
+    @Inject
+    private Storage storage;
+
+    public void guard() {
+        String id = storage.getItem("id");
+        if (id == "") {
+            createMVCGroup("login");
+        } else {
+            createMVCGroup("dashboard");
+        }
     }
 }

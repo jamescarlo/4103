@@ -10,6 +10,8 @@ import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
 import rem.Util;
+import rem.Storage;
+import rem.CipherCrypt;
 
 import javax.inject.Inject;
 import javafx.stage.Screen;
@@ -24,10 +26,15 @@ public class DashboardController extends AbstractGriffonController {
 
     @Inject
     private Util util;
+    @Inject
+    private Storage storage;
+    @Inject
+    private CipherCrypt ciphercrypt;
 
     @MVCMember
     public void setModel(@Nonnull DashboardModel model) {
         this.model = model;
+        getUserData();
     }
 
     @MVCMember
@@ -128,5 +135,13 @@ public class DashboardController extends AbstractGriffonController {
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module5() {
         open_module("TEST 5");
+    }
+
+    public void getUserData() {
+        //byte[] encrypted_id = (storage.getItem("id")).getBytes();
+        //System.out.println(encrypted_id);
+        //String id = ciphercrypt.decrypt(encrypted_id);
+        //System.out.println(id);
+        String id = storage.getItem("id");
     }
 }
