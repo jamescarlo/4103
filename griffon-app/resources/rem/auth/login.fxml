@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1517.0" style="-fx-background-color: #fffff;" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
+<AnchorPane id="LoginForm" fx:id="LoginForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1517.0" style="-fx-background-color: #ffffff;" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rem.auth.LoginController">
    <children>
       <ImageView fitHeight="773.0" fitWidth="1697.0" layoutX="-181.0" layoutY="-28.0" opacity="0.85">
          <image>

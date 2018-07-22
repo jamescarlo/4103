@@ -1,0 +1,54 @@
+#module1ActionTarget:pressed{
+    
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+#module1ActionTarget:hover{
+    
+   -fx-background-color: #cc00ff;
+   -fx-text-fill: white;
+   
+}
+#module2ActionTarget:hover{
+    -fx-background-color: #cc00ff;
+    -fx-text-fill: #ffffff;
+        
+}
+#module2ActionTarget:pressed{
+
+	-fx-padding: 10 15 13 15;
+	-fx-background-insets: 2 0 0 0 ,2 0 3 0 ,2 0 4 0 ,2 0 5 0;
+}
+#module3ActionTarget:hover{
+    -fx-background-color: #cc00ff;
+    -fx-text-fill: #ffffff;
+        
+}
+#module3ActionTarget:pressed{
+
+	-fx-padding: 10 15 13 15;
+	-fx-background-insets: 2 0 0 0 ,2 0 3 0 ,2 0 4 0 ,2 0 5 0;
+}
+#module4ActionTarget:hover{
+    -fx-background-color: #cc00ff;
+    -fx-text-fill: #ffffff;
+        
+}
+#module4ActionTarget:pressed{
+
+	-fx-padding: 10 15 13 15;
+	-fx-background-insets: 2 0 0 0 ,2 0 3 0 ,2 0 4 0 ,2 0 5 0;
+}
+#module5ActionTarget:hover{
+    -fx-background-color: #cc00ff;
+    -fx-text-fill: #ffffff;
+        
+}
+#module5ActionTarget:pressed{
+
+	-fx-padding: 10 15 13 15;
+	-fx-background-insets: 2 0 0 0 ,2 0 3 0 ,2 0 4 0 ,2 0 5 0;
+}
+
+

@@ -15,9 +15,9 @@
    <children>
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="minimizeActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" />
-            <Button fx:id="maximizeActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
-            <Button fx:id="closeActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" />
+            <Button fx:id="minimizeActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #274060;" stylesheets="@css/dashboard.css" />
+            <Button fx:id="maximizeActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #274060;" stylesheets="@css/dashboard.css" />
+            <Button fx:id="closeActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #274060;" stylesheets="@css/dashboard.css" />
             <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="1090.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_16px.png" />
@@ -38,7 +38,7 @@
       <AnchorPane fx:id="main" layoutX="220.0" layoutY="32.0" prefHeight="604.0" prefWidth="939.0" style="-fx-background-color: #ffffff; -fx-border-width: 1px; -fx-border-color: #CCCCCC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="221.0" style="-fx-background-color: #274060;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutY="140.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="221.0" style="-fx-background-color: #335C81;" textFill="WHITE">
+            <Button fx:id="dashActionTarget" layoutY="140.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="221.0" style="-fx-background-color: #335C81;" textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>
@@ -63,14 +63,14 @@
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="module1ActionTarget" layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 1" textFill="#ffffffe7">
+            <Button fx:id="module1ActionTarget" layoutX="15.0" layoutY="244.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" stylesheets="@css/dashboard.css" text="Module 1" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="module2ActionTarget" layoutX="15.0" layoutY="308.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 2" textFill="#ffffffe7">
+            <Button fx:id="module2ActionTarget" layoutX="15.0" layoutY="308.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" stylesheets="@css/dashboard.css" text="Module 2" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
@@ -90,7 +90,7 @@
                   <MenuItem mnemonicParsing="false" text="Displaying a window message" />
                </items>
             </MenuButton>
-            <Button fx:id="module3ActionTarget" layoutX="15.0" layoutY="372.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 3" textFill="#ffffffe7">
+            <Button fx:id="module3ActionTarget" layoutX="15.0" layoutY="372.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" stylesheets="@css/dashboard.css" text="Module 3" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
@@ -98,7 +98,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="module4ActionTarget" layoutX="15.0" layoutY="436.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 4" textFill="#ffffffe7">
+            <Button fx:id="module4ActionTarget" layoutX="15.0" layoutY="436.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" stylesheets="@css/dashboard.css" text="Module 4" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
@@ -106,7 +106,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="module5ActionTarget" layoutX="15.0" layoutY="500.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" text="Module 5" textFill="#ffffffe7">
+            <Button fx:id="module5ActionTarget" layoutX="15.0" layoutY="500.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #335C81;" stylesheets="@css/dashboard.css" text="Module 5" textFill="#ffffffe7">
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
