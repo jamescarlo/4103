@@ -78,9 +78,6 @@ public class LoginController extends AbstractGriffonController {
             
             if (match) {
                 byte[] id = ciphercrypt.encrypt(data.get(0).get("id") +"");
-                System.out.println(Arrays.toString(id));
-                String test = ciphercrypt.decrypt(id);
-                System.out.println(test);
                 //util.toggleView("login", "dashboard");  
             } else {
                 util.toast("Password does not match");
