@@ -35,7 +35,8 @@ public class CipherCrypt extends AbstractGriffonService {
 	int finalBytes;
 
 	public byte[] encrypt(String text) {
-		try (CryptoCipher encipher = Utils.getCipherInstance(transform, properties)) {
+		try {
+			CryptoCipher encipher = Utils.getCipherInstance(transform, properties);
 			ByteBuffer inBuffer = ByteBuffer.allocateDirect(bufferSize);
 			outBuffer = ByteBuffer.allocateDirect(bufferSize);
 			inBuffer.put(getUTF8Bytes(text));
@@ -51,11 +52,12 @@ public class CipherCrypt extends AbstractGriffonService {
 
 	public String decrypt(byte[] encoded) {
 		String decrypted = "";
-		try (CryptoCipher decipher = Utils.getCipherInstance(transform, properties)) {
-			decipher.init(Cipher.DECRYPT_MODE, key, iv);
+		try {
+			CryptoCipher decipher = Utils.getCipherInstance(transform, properties);
 			ByteBuffer decoded = ByteBuffer.allocateDirect(bufferSize);
 			outBuffer.flip();
 			outBuffer.duplicate().get(encoded);
+			decipher.init(Cipher.DECRYPT_MODE, key, iv);
 			decipher.update(outBuffer, decoded);
 			decipher.doFinal(outBuffer, decoded);
 			decoded.flip();
