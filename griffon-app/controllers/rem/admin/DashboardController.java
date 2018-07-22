@@ -22,6 +22,8 @@ import javafx.fxml.FXMLLoader;
 import java.util.Map;
 import java.util.HashMap;
 import org.apache.commons.collections4.MultiMap;
+import javax.swing.JOptionPane;
+import javax.swing.JDialog;
 
 @ArtifactProviderFor(GriffonController.class)
 public class DashboardController extends AbstractGriffonController {
@@ -99,7 +101,14 @@ public class DashboardController extends AbstractGriffonController {
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void close() {
-        view.stage.close();
+    
+    int response = JOptionPane.showConfirmDialog(null, "Do you want to Exit ?", "Warning",
+        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+    if (response == JOptionPane.YES_OPTION) {
+            view.stage.close();
+    }
+        
+           
     }
 
     @ControllerAction

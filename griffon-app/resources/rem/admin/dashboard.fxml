@@ -15,9 +15,9 @@
    <children>
       <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="1159.0" style="-fx-background-color: #274060;" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="minimizeActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #274060;" stylesheets="@css/dashboard.css" />
-            <Button fx:id="maximizeActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #274060;" stylesheets="@css/dashboard.css" />
-            <Button fx:id="closeActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #274060;" stylesheets="@css/dashboard.css" />
+            <Button fx:id="minimizeActionTarget" layoutX="1036.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="40.0" stylesheets="@css/dashboard.css" />
+            <Button fx:id="maximizeActionTarget" layoutX="1076.0" layoutY="-4.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" stylesheets="@css/dashboard.css" />
+            <Button fx:id="closeActionTarget" layoutX="1117.0" layoutY="-4.0" minHeight="10.0" minWidth="40.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" stylesheets="@css/dashboard.css" />
             <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="1090.0" layoutY="8.0">
                <image>
                   <Image url="@../auth/logos/icons8_Virtual_Machine_16px.png" />

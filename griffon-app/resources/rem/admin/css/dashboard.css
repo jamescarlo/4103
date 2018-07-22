@@ -1,34 +1,41 @@
 
 #module1ActionTarget:hover{
-   -fx-background-color: #666699;
-   -fx-text-fill: white;   
+    -fx-opacity : 0.5;
+    -fx-text-fill : #000000;
 }
 
 #module2ActionTarget:hover{
-    -fx-background-color: #cc00ff;
-    -fx-text-fill: #ffffff;
+    -fx-opacity : 0.5;
+    -fx-text-fill : #000000;
 }
 
 #module3ActionTarget:hover{
-    -fx-background-color: #cc00ff;
-    -fx-text-fill: #ffffff;        
+    -fx-opacity : 0.5;
+    -fx-text-fill : #000000;
 }
 
 #module4ActionTarget:hover{
-    -fx-background-color: #cc00ff;
-    -fx-text-fill: #ffffff;        
+    -fx-opacity : 0.5;
+    -fx-text-fill : #000000;      
 }
 
 #module5ActionTarget:hover{
-    -fx-background-color: #cc00ff;
-    -fx-text-fill: #ffffff;        
+    -fx-opacity : 0.5;
+    -fx-text-fill : #000000;     
 }
 
 #closeActionTarget:hover{
-    -fx-background-color: #e6005c;
+    -fx-opacity: 1.0;
+    -fx-background-color: #cc0000;
+    -fx-text-fill : #cc0000;
 }
-
-#dashActionTarget:pressed{
-    -fx-padding: 10 15 13 15 ;
-    -fx-background-insents: 2 0 0 0 ,2 0 3 0,2 0 4 0 ,2 0 5 0;
+#maximizeActionTarget:hover{
+    -fx-background-color: #9292b9;
+    -fx-text-fill : #9292b9;
+    -fx-opacity: 1.0;
+}
+#minimizeActionTarget:hover{
+    -fx-opacity: 1.0;
+    -fx-background-color:#9292b9;
+    -fx-text-fill : #9292b9;
 }
