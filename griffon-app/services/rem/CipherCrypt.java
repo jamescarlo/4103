@@ -45,7 +45,7 @@ public class CipherCrypt extends AbstractGriffonService {
 			updateBytes = encipher.update(inBuffer, outBuffer);
 			finalBytes = encipher.doFinal(inBuffer, outBuffer);
 		} catch (Exception e) {
-			System.out.println(e);
+            e.printStackTrace();
 		}
 		return new byte[updateBytes + finalBytes];
 	}
@@ -63,7 +63,7 @@ public class CipherCrypt extends AbstractGriffonService {
 			decoded.flip();
 			decrypted = asString(decoded);
 		} catch (Exception e) {
-			System.out.println(e);
+            e.printStackTrace();
 		}
 		return decrypted;
 	}

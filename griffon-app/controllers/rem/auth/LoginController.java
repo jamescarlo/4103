@@ -9,12 +9,13 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
-import griffon.inject.MVCMember;
-import javax.inject.Inject;
 import rem.Util;
 import rem.DBQuery;
 import rem.CipherCrypt;
 import rem.PasswordHash;
+
+import griffon.inject.MVCMember;
+import javax.inject.Inject;
 import java.util.Map;
 import org.apache.commons.collections4.MultiMap;
 import java.lang.Byte;
@@ -37,13 +38,10 @@ public class LoginController extends AbstractGriffonController {
 
     @Inject
     private Util util;
-
     @Inject
     private DBQuery dbquery;
-
     @Inject 
     private CipherCrypt ciphercrypt;
-
     @Inject
     private PasswordHash pwhash;
 

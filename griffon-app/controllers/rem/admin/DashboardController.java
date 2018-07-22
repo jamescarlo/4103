@@ -9,8 +9,9 @@ import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 import griffon.transform.Threading;
 import javax.annotation.Nonnull;
 
-import javax.inject.Inject;
 import rem.Util;
+
+import javax.inject.Inject;
 import javafx.stage.Screen;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;

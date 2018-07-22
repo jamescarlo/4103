@@ -63,8 +63,8 @@ public class DBQuery extends AbstractGriffonService {
             }
             br.close();
             connect();
-        } catch(Exception ex) {
-            System.out.println(ex);
+        } catch(Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -72,7 +72,7 @@ public class DBQuery extends AbstractGriffonService {
     	try {
             Class.forName("com.mysql.jdbc.Driver");
         }catch(ClassNotFoundException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
 
         try {
@@ -99,7 +99,7 @@ public class DBQuery extends AbstractGriffonService {
             }
             rs.close();
         }catch(SQLException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
         return map;
     }
@@ -110,7 +110,7 @@ public class DBQuery extends AbstractGriffonService {
             Statement st = conn.createStatement();
             st.executeUpdate(query);
         }catch(SQLException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -120,7 +120,7 @@ public class DBQuery extends AbstractGriffonService {
             Statement st = conn.createStatement();
             st.executeUpdate(query);
         }catch(SQLException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -130,7 +130,7 @@ public class DBQuery extends AbstractGriffonService {
             Statement st = conn.createStatement();
             st.executeUpdate(query);
         }catch(SQLException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -274,7 +274,7 @@ public class DBQuery extends AbstractGriffonService {
             Statement st = conn.createStatement();
             st.executeUpdate(query);
         }catch(SQLException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
     
@@ -282,7 +282,7 @@ public class DBQuery extends AbstractGriffonService {
         try{
             conn.close();
         }catch(SQLException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 }
