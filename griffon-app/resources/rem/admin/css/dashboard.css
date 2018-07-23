@@ -1,27 +1,27 @@
 
 #module1ActionTarget:hover{
     -fx-opacity : 0.5;
-    -fx-text-fill : #000000;
+    /*-fx-text-fill : #000000;*/
 }
 
 #module2ActionTarget:hover{
     -fx-opacity : 0.5;
-    -fx-text-fill : #000000;
+    /*-fx-text-fill : #000000;*/
 }
 
 #module3ActionTarget:hover{
     -fx-opacity : 0.5;
-    -fx-text-fill : #000000;
+    /*-fx-text-fill : #000000;*/
 }
 
 #module4ActionTarget:hover{
     -fx-opacity : 0.5;
-    -fx-text-fill : #000000;      
+    /*-fx-text-fill : #000000;*/      
 }
 
 #module5ActionTarget:hover{
     -fx-opacity : 0.5;
-    -fx-text-fill : #000000;     
+    /*-fx-text-fill : #000000;*/     
 }
 
 #closeActionTarget:hover{
