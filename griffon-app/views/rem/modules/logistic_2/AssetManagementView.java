@@ -18,17 +18,17 @@ import javax.annotation.Nonnull;
 import rem.admin.DashboardView;
 
 @ArtifactProviderFor(GriffonView.class)
-public class WarehouseView extends AbstractJavaFXGriffonView {
-    private WarehouseController controller;
-    private WarehouseModel model;
-
+public class AssetManagementView extends AbstractJavaFXGriffonView {
+    private AssetManagementController controller;
+    private AssetManagementModel model;
+    
     @MVCMember
-    public void setController(@Nonnull WarehouseController controller) {
+    public void setController(@Nonnull AssetManagementController controller) {
         this.controller = controller;
     }
 
     @MVCMember
-    public void setModel(@Nonnull WarehouseModel model) {
+    public void setModel(@Nonnull AssetManagementModel model) {
         this.model = model;
     }
 

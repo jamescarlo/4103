@@ -118,6 +118,7 @@ public class DashboardController extends AbstractGriffonController {
         util.toggleView("dashboard", "login");
     }
 
+    private String[] modules = { "" };
     private String last_opened_module = "";
 
     private void open_module(String module_name) {
@@ -136,48 +137,54 @@ public class DashboardController extends AbstractGriffonController {
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module1() {
-        open_module("warehouse");
+        open_module(modules[0]);
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module2() {
-        open_module("howtopopulatetable");
+        open_module(modules[1]);
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module3() {
-        open_module("TEST 3");
+        open_module(modules[2]);
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module4() {
-        open_module("TEST 4");
+        open_module(modules[3]);
     }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void module5() {
-        open_module("TEST 5");
+        open_module(modules[4]);
     }
 
     public String[] getModules(String role) {
         Map<String, String[]> modules = new HashMap();
 
+        String[] hr_2 = {
+            "Employee Self-service", 
+            ""
+        };
         String[] logistic_2 = {
             "Project Management", 
             "Warehouse", 
             "Procurement", 
             "Asset Management"
         };
+
+        modules.put("hr_2", hr_2);
         modules.put("logistic2_admin", logistic_2);
 
         return modules.get(role);
     }
 
-    public void updateModulesButton(String[] modules) {
+    public void updateModulesButton() {
         view.module1ActionTarget.setText(modules[0]);
         view.module2ActionTarget.setText(modules[1]);
         view.module3ActionTarget.setText(modules[2]);
@@ -213,8 +220,8 @@ public class DashboardController extends AbstractGriffonController {
         query2.put("condition",     "id = "+ id);
 
         Map<String, Map> user_data = db.get(query2);
-        String[] modules = getModules(user_data.get(0).get("role") +"");
-        updateModulesButton(modules);
+        modules = getModules(user_data.get(0).get("role") +"");
+        updateModulesButton();
     }
 
 }
