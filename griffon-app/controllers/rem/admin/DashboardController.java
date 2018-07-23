@@ -178,7 +178,7 @@ public class DashboardController extends AbstractGriffonController {
             "Asset Management"
         };
 
-        modules.put("hr_2", hr_2);
+        modules.put("hr2_admin", hr_2);
         modules.put("logistic2_admin", logistic_2);
 
         return modules.get(role);
